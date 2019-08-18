@@ -17,5 +17,10 @@ puts "yunus"[1]
 myname="yunus"
 puts myname + "hello"
 mynum=43
-mynum ++
-puts mynum
+
+
+
+
+
+
+puts "fulya"
