@@ -1,48 +1,37 @@
-#Define a Method With Def 
-def sayMyName
-    puts "hello Yunus!"
+# Write a method `number_check(num)` that takes in a number and returns a string. 
+# The method should return the string 'positive' if the num is positive, 'negative' if the num is negative, and 'zero' if the num is zero.
+
+def number_check(num)
+    if(num>0)
+        puts "positive"
+    elsif num==0
+        puts "zero"
+    elsif num<0
+        puts "negative"
+    end
+
+
 end
 
-#Call the Method
- sayMyName
+puts number_check(5)    # => "positive"
+puts number_check(-2)   # => "negative"
+puts number_check(0)    # => "zero"
 
+# Write a method `word_check(word)` that takes in a word and returns a string.
+# The method should return the string "long" if the word is longer than 6 characters, "short" if it is less than 6 characters, 
+# and "medium" if it is exactly 6 characters long.
 
- def say_date(data1)
-    puts "the date is " +data1
- end
-var=32
-
-
-let=54
-if let<49
-    puts"yes"
-elsif let >40
-    puts "no"
-else
-    puts "third answer"
-end
-
-def average_counter(num1,num2,num3)
-    average=(num1+num2+num3)/3
-    return average
-end
-
-
-
-def either_only(num)
-    if(num%3==0||num%5==0)
-        if !(num%3==0&&num%5==0)
-            puts("herlllooo")
-        else
-            puts "both"
-        end
-    else
-       puts "none of them"
-        
+def word_check(word)
+    if(word.length>6)
+        puts "long"
+    elsif(word.length==6)
+        puts "medium"
+    elsif(word.length<6)
+        puts "short"
     end
 end
 
 
-
-
- either_only(12)       
+puts word_check("contraption") # => "long"
+puts word_check("fruit")       # => "short"
+puts word_check("puzzle")      # => "medium"
