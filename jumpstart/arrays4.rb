@@ -20,3 +20,15 @@ end
 
 print is_palindrome("olo")
 puts
+print arr
+puts
+
+ arr=["a","b","c","d","e","f"]
+#Array slice method with (..) This includes starting and ending indexes
+print arr[1..2]
+puts
+
+#Array slice method with (... ) This excludes  ending index and include start index
+print arr[2...4]
+puts
+
