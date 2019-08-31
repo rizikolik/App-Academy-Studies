@@ -1,4 +1,4 @@
-# This repository is for the people who wants to be accepted to AppAcademy's Bootcamps.
+# This repository is contains my solutions and studies  for the AppAcademy's Jump Start Course.
 ## This is a small but strong  Ruby language skills builder lesson.
 ### What I learned here :
 1. Fundamentals Of Ruby Language .(What is it, where it comes from etc..)
