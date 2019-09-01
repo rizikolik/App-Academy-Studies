@@ -90,6 +90,7 @@ arr_1 = [
 
 print two_d_translate(arr_1) # => [ 'boot', 'boot', 'boot', 'camp', 'camp' ]
 puts
+puts "================"
 
 arr_2 = [
   ['red', 1],
@@ -98,3 +99,53 @@ arr_2 = [
 
 print two_d_translate(arr_2) # => [ 'red', 'blue', 'blue', 'blue', 'blue' ]
 puts
+puts "================"
+# Write a method `array_translate` that takes in an array whose elements alternate between words and numbers.
+# The method should return a string where each word is repeated the number of times that immediately follows in the array.
+def array_translate(array)
+    translated_word=""
+    array.each.with_index do |elem,idx|
+        if array[idx+1].to_i >0
+           translated_word+=elem*(array[idx+1])
+         end
+    end
+return translated_word
+
+
+end
+
+print array_translate(["Cat",2, "Dog", 3, "Mouse", 1]); # => "CatCatDogDogDogMouse"
+puts
+puts "================"
+print array_translate(["red", 3, "blue", 1]); # => "redredredblue"
+puts
+puts "================"
+
+# Write a method `pig_latin_word` that takes in a word string and translates the word into pig latin.
+
+# Pig latin translation uses the following rules:
+# - for words that start with a vowel, add 'yay' to the end
+# - for words that start with a nonvowel, move all letters before the first vowel to the end of the word and add 'ay'
+
+def pig_latin_word(word)
+    vovels="aeiou"
+   if vovels.include?(word[0])
+       return word+"yay"
+    end
+    word.each_char.with_index do |char,idx|
+        if vovels.include?(char)
+          return  word[idx..-1]+word[0...idx] +"ay"
+        end
+        
+    end
+   
+  
+
+   
+end
+
+puts pig_latin_word("apple")   # => "appleyay"
+puts pig_latin_word("eat")     # => "eatyay"
+puts pig_latin_word("banana")  # => "ananabay"
+puts pig_latin_word("trash")   # => "ashtray"
+puts "================"
