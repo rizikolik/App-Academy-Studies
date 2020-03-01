@@ -20,4 +20,8 @@
  puts new_hash.length  ## this will give the number of the keys in an array .
  puts new_hash
 
- puts  new_hash.has_key?("age") # usefull when we are searching a big hash .
+ puts  new_hash.has_key?("age") # usefull when we are searching a big hash's keys.
+        new_hash.has_value?("age") # usefull when we are searching a big hash's values.
+print  new_hash 
+puts "===" 
+p  new_hash     
