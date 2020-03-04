@@ -350,3 +350,51 @@ end
 
 puts double_letter_count("the jeep rolled down the hill") #=> 3
 puts double_letter_count("bootcamp") #=> 1
+
+# Write a method `adjacent_sum` that takes in an array of numbers and returns a new array containing 
+# the sums of adjacent numbers in the original array. See the examples.
+
+def adjacent_sum(arr)
+    updated=[]
+arr.each.with_index do |k,index|
+    numara = index+1
+    if arr[numara] != nil
+  deger=k + arr[numara]
+  updated << deger
+    end
+    
+
+
+end
+return updated
+end
+
+print adjacent_sum([3, 7, 2, 11]) #=> [10, 9, 13], because [ 3+7, 7+2, 2+11 ]
+puts
+print adjacent_sum([2, 5, 1, 9, 2, 4]) #=> [7, 6, 10, 11, 6], because [2+5, 5+1, 1+9, 9+2, 2+4]
+puts "======================"
+
+# Write a method `pyramid_sum` that takes in an array of numbers representing the base of a pyramid. 
+# The function should return a 2D array representing a complete pyramid with the given base. 
+# To construct a level of the pyramid, we take the sum of adjacent elements of the level below.
+
+def pyramid_sum(base)
+    pyramid=[base]
+    flat=[]
+pyramid.each do |arrays|
+arrays.each.with_index do |k,idx|
+if arrays[idx+1] != nil
+   flat << k+arrays[idx+1]
+end 
+end
+end
+pyramid.unshift(flat)
+
+return pyramid
+end
+
+print pyramid_sum([1, 4, 6]) #=> [[15], [5, 10], [1, 4, 6]]
+puts
+
+print pyramid_sum([3, 7, 2, 11]) #=> [[41], [19, 22], [10, 9, 13], [3, 7, 2, 11]]
+puts
