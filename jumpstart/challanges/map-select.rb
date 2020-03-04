@@ -128,18 +128,15 @@ puts most_vowels("what a wonderfuul lifelihoda") #=> "wonderful"
 # A prime number is only divisible by 1 and itself.
 
 def prime?(num)
-asals=[2,3,5,7]
-count=0
-asals.each do |rakam|
-if(num==rakam)
-    count+=1
-   return true
-   
+if num<2
+    return false
 end
-if(num%rakam!=0)
-    count+=1
+(2...num).each do |key|
+if num % key == 0
+    return false
 end
 end
+return true
 
 end
 
@@ -149,3 +146,80 @@ puts prime?(11) #=> true
 puts prime?(4)  #=> false
 puts prime?(9)  #=> false
 puts prime?(-5) #=> false
+
+# Write a method `prime_factors` that takes in a number and returns an array containing all of the prime factors of the given number.
+
+def prime_factors(num)
+    factors=[]
+(2...num).each do |factor|
+if num % factor == 0 && prime?(factor)
+factors << factor
+end
+end
+def primes(num)
+if num<2
+    return false
+end
+(2...num).each do |key|
+    if num%key == 0
+        return false 
+    end
+
+end
+return true
+end
+return factors
+end
+
+puts prime_factors(24) #=> [2, 3]
+puts
+puts prime_factors(60) #=> [2, 3, 5]
+
+# Write a method `greatest_factor_array` that takes in an array of numbers and returns a new array 
+# where every even number is replaced with it's greatest factor. 
+# A greatest factor is the largest number that divides another with no remainder. 
+# For example the greatest factor of 16 is 8. 
+# (For the purpose of this problem we won't say the greatest factor of 16 is 16, because that would be too easy, ha)
+
+def greatest_factor_array(arr)
+    newarr=[]
+arr.each do |key|
+    if key % 2 == 0
+        evens=(2...key-1).select do |factor|
+             key % factor == 0
+            end
+       newarr << evens[evens.length-1]
+        else newarr << key
+        end 
+end
+return newarr
+end
+
+
+print greatest_factor_array([16, 7, 9, 14]) # => [8, 7, 9, 7]
+puts
+print greatest_factor_array([30, 3, 24, 21, 10]) # => [15, 3, 12, 21, 5]
+puts "======================================"
+
+# Write a method `perfect_square?` that takes in a number and returns a boolean indicating whether it is a perfect square.
+# A perfect square is a number that results from multiplying a number by itself. 
+# For example, 9 is a perfect square because 3 * 3 = 9, 25 is a perfect square because 5 * 5 = 25.
+
+def perfect_square?(num)
+if num < 2 
+    return  true
+end
+(2...num).each do |key|
+if key*key == num
+    return true
+end
+
+end
+return false
+end
+
+puts perfect_square?(121)   #=> true
+puts perfect_square?(13)  #=> false
+puts perfect_square?(30)  #=> false
+puts perfect_square?(9)   #=> true
+puts perfect_square?(144)  #=> true
