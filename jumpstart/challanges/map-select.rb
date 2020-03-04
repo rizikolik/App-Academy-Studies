@@ -223,3 +223,130 @@ puts perfect_square?(13)  #=> false
 puts perfect_square?(30)  #=> false
 puts perfect_square?(9)   #=> true
 puts perfect_square?(144)  #=> true
+
+
+# Write a method `triple_sequence` that takes in two numbers, start and length. 
+# The method should return an array representing a sequence that begins with `start` and is `length` elements long. 
+# In the sequence, every element should be 3 times the previous element. Assume that the length is at least 1.
+
+def triple_sequence(start, length)
+i=1
+arr=[start]
+while i<length
+   arr << arr[i-1]*3
+   i+=1
+end
+return arr
+    
+end
+
+print triple_sequence(2, 4) # => [2, 6, 18, 54]
+puts
+puts triple_sequence(4, 5) # => [4, 12, 36, 108, 324]
+puts"================="
+
+# A number's summation is the sum of all positive numbers less than or equal to the number. 
+# For example: the summation of 3 is 6 because 1 + 2 + 3 = 6, the summation of 6 is 21 because 1 + 2 + 3 + 4 + 5 + 6 = 21. 
+# 
+# Write a method `summation_sequence` that takes in a two numbers: `start` and `length`. 
+# The method should return an array containing `length` total elements. 
+# The first number of the sequence should be the `start` number. 
+# At any point, to generate the next element of the sequence we take the summation of the previous element. 
+# You can assume that `length` is not zero.
+
+
+def summation_sequence(start, length)
+arr=[start]
+
+i=1
+while i < length
+    sum=0
+ (1..arr[-1]).each do |key|
+    
+  sum+=key
+    end
+arr << sum
+i+=1
+end
+
+return arr
+end
+
+
+p summation_sequence(3, 4) # => [3, 6, 21, 231]
+ p summation_sequence(5, 3) # => [5, 15, 120]
+ puts "======fibonacci"
+
+
+ # The fibonacci sequence is a sequence of numbers whose first and second elements are 1. 
+# To generate further elements of the sequence we take the sum of the previous two elements. 
+# For example the first 6 fibonacci numbers are 1, 1, 2, 3, 5, 8. Write a method `fibonacci` that takes in a number length and returns the fibonacci sequence up to the given length.
+
+def fibonacci(length)
+fibonacci_array=[1,1]
+if length == 1 
+    return [1]
+elsif length == 0
+    return []
+end
+if length >1
+    i=2
+    while i < length
+      newone = fibonacci_array[-1] + fibonacci_array[-2]
+     fibonacci_array << newone
+     i+=1
+    end 
+end
+
+return fibonacci_array
+
+end
+
+print fibonacci(0) # => []
+puts
+print fibonacci(1) # => [1]
+puts
+print fibonacci(6) # => [1, 1, 2, 3, 5, 8]
+puts
+print fibonacci(8) # => [1, 1, 2, 3, 5, 8, 13, 21]
+puts "================================="
+
+
+# Write a method `caesar_cipher` that takes in a string and a number. 
+# The method should return a new string where every character of the original is shifted `num` characters in the alphabet.
+
+def caesar_cipher(str, num)
+alpa=["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"]
+star=str.split("")
+newstr=[]
+star.each do |key|
+    newa=alpa.index(key)+num
+    if alpa[newa]
+    newstr << alpa[newa]
+    else  newstr << alpa[(newa - alpa.length)]
+    end
+end
+return newstr.join("")
+end
+
+puts caesar_cipher("apple", 1)    #=> "bqqmf"
+puts caesar_cipher("bootcamp", 2) #=> "dqqvecor"
+puts caesar_cipher("zebra", 4)    #=> "difve"
+puts "=============ceaser ===================="
+
+
+# Write a method that takes in a string and returns the number of times that the same letter repeats twice in a row.
+
+def double_letter_count(string)
+    count=0
+ string.each_char.with_index do |key,idx|
+if string[idx] == string[idx+1]
+    count+=1
+end
+
+end
+return count
+end
+
+puts double_letter_count("the jeep rolled down the hill") #=> 3
+puts double_letter_count("bootcamp") #=> 1
