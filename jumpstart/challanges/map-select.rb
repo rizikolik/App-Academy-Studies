@@ -406,3 +406,121 @@ puts
 
 print pyramid_sum([3, 7, 2, 11]) #=> [[41], [19, 22], [10, 9, 13], [3, 7, 2, 11]]
 puts
+
+# Write a method `consonant_cancel` that takes in a sentence and returns a new sentence where every word begins with it's first vowel.
+
+def consonant_cancel(sentence)
+arr1=sentence.split(" ")
+
+arr2=arr1.map {|ele| dele(ele)}
+return arr2.join(" ")
+end
+def dele(kelime)
+    vovels="aeiuo"
+    kelime.each_char.with_index do |c,k|
+        if vovels.include?(c)
+        return kelime[k..-1]
+        end
+     end
+end
+    
+
+
+puts consonant_cancel("down the rabbit hole") #=> "own e abbit ole"
+puts consonant_cancel("writing code is challenging") #=> "iting ode is allenging"
+
+# Write a method `all_else_equal` that takes in an array of numbers. 
+# The method should return the element of the array that is equal to half of the sum of all elements of the array. 
+# If there is no such element, the method should return nil.
+
+def all_else_equal(arr)
+total=0
+arr[0..-1].each {|k| total+=k}
+if arr.include?(total/2)
+    return total/2
+
+else return nil
+end
+end
+
+p all_else_equal([2, 4, 3, 10, 1]) #=> 10
+p all_else_equal([6, 3, 5, -9, 1]) #=> 3
+p all_else_equal([1, 2, 3, 4])     #=> false
+puts"========================"
+
+
+
+# Write a method `anagrams?` that takes in two words and returns a boolean indicating whether or not the words are anagrams. 
+# Anagrams are words that contain the same characters but not necessarily in the same order. 
+# Solve this without using .sort
+
+
+def anagrams?(word1, word2)
+        if word1.length!=word2.length
+            return false
+        end
+        arr=word1.split("").select {|k| word2.include?(k)}
+        if arr.length != word1.length
+        return false
+        end
+    return true
+
+end
+
+puts anagrams?("cat", "act")          #=> true
+puts anagrams?("restful", "fluster")  #=> true
+puts anagrams?("cat", "dog")          #=> false
+puts anagrams?("boot", "bootcamp")    #=> false
+
+puts "==================="
+# Write a method `vowel_cipher` that takes in a string and returns a new string where 
+# every vowel becomes the next vowel in the alphabet.
+
+def vowel_cipher(string)
+    vovels=["a","e","i","o","u"]
+    arr=[]
+    string.split("").each.with_index do |k,i|
+            if !vovels.include?(k)
+                arr << k
+                elsif vovels.index(k)+1<5
+                arr << vovels[vovels.index(k)+1]
+                else
+                        arr <<vovels[(vovels.index(k)+1)-5]
+             end
+    end
+return arr.join("")
+end
+
+puts vowel_cipher("bootcamp") #=> buutcemp
+puts vowel_cipher("paper cup") #=> pepir cap
+
+# Write a method `pick_primes` that takes in an array of numbers and returns a new array containing only the prime numbers.
+
+def pick_primes(numbers)
+whole=numbers.select {|n| primess(n)}
+return whole
+end
+
+def primess(number)
+    total=0
+    if number <2
+       return false
+    end
+   (2...number).each do  |n|
+  if number%n == 0
+   total+=1
+   end
+end
+if total>0
+    return false
+end
+return true
+ 
+end
+
+
+
+print pick_primes([2, 3, 4, 5, 6]) #=> [2, 3, 5]
+puts
+print pick_primes([101, 20, 103, 2017]) #=> [101, 103, 2017]
+puts
