@@ -381,14 +381,22 @@ puts "======================"
 def pyramid_sum(base)
     pyramid=[base]
     flat=[]
-pyramid.each do |arrays|
-arrays.each.with_index do |k,idx|
-if arrays[idx+1] != nil
-   flat << k+arrays[idx+1]
-end 
+    while pyramid.length <base.length 
+
+       
+        pyramid.unshift(adjacent_sum(pyramid[0]))
+    end
+    def sum(arr1)
+   arr1.each.with_index do |k,idx|
+
+        if arr1[idx+1] != nil
+            puts k+arr1[idx+1]
+        flat << k+arr1[idx+1]
+        end 
+    end
 end
-end
-pyramid.unshift(flat)
+
+
 
 return pyramid
 end
