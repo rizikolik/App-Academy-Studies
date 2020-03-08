@@ -8,3 +8,21 @@
 puts [1,2,3,4].inject { |acc,el| acc+el}
 
  # result of the block is always reassigned to be the new accumulator !!!!
+puts [11, 7, 2, 4].inject(100) { |acc, el| acc + el }
+# We can assign the first acc .
+
+
+sum=[11, 7, 2, 4].inject(0) do |acc, el|
+    if el.even?
+        acc + el
+    else
+        acc
+    end
+end 
+puts sum  # gives the sum of the all even numbers in an array .
+
+
+
+
+
+
