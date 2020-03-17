@@ -67,31 +67,16 @@ puts "============="
 
 
 def my_rotate!(array, amt)
-
-	if amt<0
-		arr=[]
-array.each.with_index  do |el,idx|
-		if  idx+amt.abs<array.length
-				if !arr.include?(idx+amt.abs)
-				array[idx+amt.abs]=el
-					arr << (idx+amt.abs)
-				else 
-					el 
-				end
-		else 
-				if !arr.include?((idx+amt.abs)-(array.length))
-				array[(idx+amt.abs)-(array.length)]=el 
-				arr << ((idx+amt.abs)-(array.length))
-				else
-					el 
-				end
-			
+	rotate=false
+while amt<0
+	rotate=true
+	array.each.with_index do |k,idx|
+		array[idx+1],array[idx-1]=k,array[idx-1]
 	end
-
-	end
+	rotate=false
+	amt+=1
 end
-		
-	return array
+return array		
 end
 
 
