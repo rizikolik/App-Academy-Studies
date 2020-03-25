@@ -66,5 +66,5 @@ end
 def ana_array(arr_1, arr_2)
     count_1 = counter(arr_1)
     count_2 = counter(arr_2)
-    count_1 == count_2
+   return  count_1 == count_2
 end
