@@ -1,5 +1,5 @@
 class Team
-    #include Enumerable
+    include Enumerable
     attr_accessor :name,:players
   def  initialize(name)
     @name=name
