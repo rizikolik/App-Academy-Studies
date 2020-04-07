@@ -51,7 +51,7 @@ def bi_prime?(num)
     bol=[]
     (2...num).each do  |key|
         if num%key==0 &&prime?(key)
-            bol <<key
+            bol << key
         end
      end
      bol.any? do |ele|
@@ -59,13 +59,50 @@ def bi_prime?(num)
          bol.include?(b)
      end
 
-
-     
 end
-p bi_prime?(25)   # => true
-
 
 def vigenere_cipher(message, keys)
 
-
+	newa=""
+alp=("a".."z").to_a
+	len=message.length
+	arr=[]
+	
+	
+(len).times { keys.each{|k| arr <<k}}
+	message.each_char.with_index  do |c,i|
+	
+	newa+=alp[((alp.index(c)+arr[i])%alp.length)]
+		
+	
+	end
+newa
 end
+p vigenere_cipher("toerrishuman", [1])        # => "upfssjtivnbo"
+p vigenere_cipher("toerrishuman", [1, 2])     # => "uqftsktjvobp"
+p vigenere_cipher("toerrishuman", [1, 2, 3])  # => "uqhstltjxncq"
+p vigenere_cipher("zebra", [3, 0])            # => "ceerd"
+p vigenere_cipher("yawn", [5, 1])             # => "dbbo"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
