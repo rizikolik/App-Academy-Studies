@@ -99,13 +99,37 @@ newa
 end
 
 
-p vowel_rotate('oranges')       # => "erongas"
-p vowel_rotate('headphones')    # => "heedphanos"
-p vowel_rotate('bootcamp')      # => "baotcomp"
-p vowel_rotate('awesome')       # => "ewasemo"
 
 
+class String
+            def select(&prc)
+                return '' if prc.nil?
+                new_str = ''
 
+                self.each_char do |char|
+                    new_str += char if prc.call(char)
+                end
+
+                new_str
+
+            end
+
+            def map(%prc)
+                newa=""
+                if prc.nil 
+                    return ""
+                end
+                self.each_char.with_index do |k,i|
+                    if prc.call(k)
+                        newa+=prc.call(k)
+                    else
+                        newa+=k
+                    end
+                end
+
+newa
+            end
+end
 
 
 
