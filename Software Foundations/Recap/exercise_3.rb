@@ -78,11 +78,33 @@ alp=("a".."z").to_a
 	end
 newa
 end
-p vigenere_cipher("toerrishuman", [1])        # => "upfssjtivnbo"
-p vigenere_cipher("toerrishuman", [1, 2])     # => "uqftsktjvobp"
-p vigenere_cipher("toerrishuman", [1, 2, 3])  # => "uqhstltjxncq"
-p vigenere_cipher("zebra", [3, 0])            # => "ceerd"
-p vigenere_cipher("yawn", [5, 1])             # => "dbbo"
+
+
+
+def vowel_rotate(str)
+	
+	vovels="aeiou"
+	vovels_index=[]
+    newa=str[0..-1]
+    
+    str.each_char.with_index {|k,i| vovels_index<< i if vovels.include?(k)}
+
+  rotated=vovels_index.rotate(-1)
+
+vovels_index.each.with_index do |k,i|
+    new_vowel = str[rotated[i]]
+    newa[k] = new_vowel
+end
+newa
+end
+
+
+p vowel_rotate('oranges')       # => "erongas"
+p vowel_rotate('headphones')    # => "heedphanos"
+p vowel_rotate('bootcamp')      # => "baotcomp"
+p vowel_rotate('awesome')       # => "ewasemo"
+
+
 
 
 
