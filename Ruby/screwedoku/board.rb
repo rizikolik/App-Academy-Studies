@@ -1,4 +1,6 @@
+require "byebug"
 require_relative "tile"
+
 
 class Board
   def self.empty_grid
@@ -85,4 +87,4 @@ class Board
 end
 
 pa=Board.new(2)
-puts pa
+puts pa.rows
