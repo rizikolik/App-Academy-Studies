@@ -56,6 +56,22 @@ class PolyTreeNode
     
         nil
     end
+    def bfs(target)
+        array=[self]
+  until array.empty?
+        array.each do |node|
+            vall=array.shift
+         return vall if vall.value ==target
+               array+=vall.children
+            
+
+        end
+    end
+
+       nil
+    
+
+    end
     
 
 
