@@ -45,18 +45,17 @@ class PolyTreeNode
 
      child_node.parent=nil 
     end
-   def  dfs(target_value)
-    return @value if @value==target_value
-    @children.each do |key|
-    search=dfs(key)
-    return search unless search.nil?
+
+    def dfs(target)
+       
+        return self if self.value==target
+    self.children.each do  |key|
+        result=key.dfs(target)
+        return result unless result.nil?
     end
     
-
- 
-    
-
-   end
+        nil
+    end
     
 
 
