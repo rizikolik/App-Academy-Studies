@@ -1,8 +1,8 @@
-require_relative "piece"
+require_relative "pieces"
 class Board
     attr_reader :rows
-    def initialize(rows)
-        @rows=Array.new(rows){ Array.new(rows,0)}
+    def initialize
+        @rows = Array.new(8) { Array.new (8) { NullPiece.instance } }
         @sentinental=nil
 
     end
@@ -33,5 +33,5 @@ class Board
 
 end
 
-board=Board.new(6)
-p board.rows
+board=Board.new
+p board
