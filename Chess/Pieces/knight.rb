@@ -1,4 +1,4 @@
-class Knight
+class Knight<Piece
     include Stepable
     def symbol
     end

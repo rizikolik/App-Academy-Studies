@@ -1,4 +1,4 @@
-class Bishop
+class Bishop<Piece
     include Slideable
     def symbol
     end

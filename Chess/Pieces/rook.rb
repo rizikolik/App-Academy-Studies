@@ -1,4 +1,4 @@
-class Rook
+class Rook<Piece
     include Slideble
     def symbol
     end

@@ -1,4 +1,4 @@
-class King
+class King<Piece
     include Stepable
     def symbol
     end

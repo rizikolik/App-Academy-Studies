@@ -3,17 +3,25 @@ class Board
     attr_reader :rows
     def initialize
         @rows = Array.new(8) { Array.new (8) { NullPiece.instance } }
-        @sentinental=nil
+        @sentinel=nil
 
     end
     def valid_pos?(pos)
     end
 
     def [](pos)
-    end
+        row, col = pos[0], pos[1]
+       @rows[row][col]
+      end
     def []=(pos,val)
     end
     def move_piece(color,start_pos,end_pos)
+        if start_pos.nil?
+            raise.ArgumentError "You have to give  a valid start point"
+        end
+        if !end_pos
+            raise.ArgumentError "This end point cant use .."
+        end
     end
     def add_piece(piece,pos)
     end
@@ -34,4 +42,5 @@ class Board
 end
 
 board=Board.new
-p board
+pos=2,3
+board[pos]
