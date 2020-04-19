@@ -1,9 +1,9 @@
 require "dessert"
-require "drink"
+
 
 describe Dessert  do
     subject(:fake) {Dessert.new("sugar",50)}
-    let (:milk) {Drink.new("milk")}
+    let (:milk) {double("milk")}
     describe "#initialize"do
         it "takes in a type " do
          expect(fake.type).to eq("sugar")
