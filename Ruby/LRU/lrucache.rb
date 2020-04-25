@@ -7,8 +7,8 @@ class LRUCache
     end
 
     def count
-     @cache.size
-      # returns number of elements currently in cache
+     @cache.count
+    
     end
 
     def add(el)
@@ -28,10 +28,9 @@ class LRUCache
     def show
     p @cache
 
-      # shows the items in the cache, with the LRU item first
-    end
+   end
 
-    private
-    # helper methods go here!
+   
+   
 
   end
