@@ -480,7 +480,7 @@ from customer c cross join
   cross join
  (select 'CHK' prod_cd, to_date('2005-03-12', 'YYYY-MM-DD') open_date, to_date('2008-12-27', 'YYYY-MM-DD') last_date,
     2258.02 avail, 2258.02 pend union all
-  select 'SAV' prod_cd, to_date('2005-03-12', 'YYYY-MM-DD') open_date, to_date('2008-12-11', 'YYYY-MM-DD') last_date,
+  select  having 'SAV' prod_cd, to_date('2005-03-12', 'YYYY-MM-DD') open_date, to_date('2008-12-11', 'YYYY-MM-DD') last_date,
     200.00 avail, 200.00 pend) a
 where c.fed_id = '222-22-2222';
 insert into account (product_cd, cust_id, open_date,
