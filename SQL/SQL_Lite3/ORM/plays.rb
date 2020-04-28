@@ -25,6 +25,12 @@ attr_accessor :title , :year , :playwright_id
         data =PlayDBConnection.instance.execute("SELECT*FROM plays")
         data.map{ |datum|  Play.new(datum)}
     end
+    def self.find_by_title(title)
+    end
+
+    def self.find_by_playwright(name)
+
+    end
     def initialize(options)
         @id=options['id']
         @title=options['title']
@@ -55,4 +61,21 @@ attr_accessor :title , :year , :playwright_id
         SQL
         
     end
+
+
 end
+
+class Playwright
+    def self.all
+    end
+    def self.find_by_name(name)
+    end
+    def new
+    end
+     def create
+     end
+     def update
+     end
+     def get_plays
+     end
+     
