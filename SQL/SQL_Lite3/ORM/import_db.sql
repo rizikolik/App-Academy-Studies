@@ -1,9 +1,9 @@
 CREATE TABLE plays(
 id  INTEGER PRIMARY KEY,
 title TEXT NOT NULL,
-year DATE NOT NULL,
-playwrights_id  INTEGER NOT NULL,
-FOREIGN KEY (playwrights_id) REFERENCES playwrights(id)
+year INTEGER NOT NULL,
+playwright_id  INTEGER NOT NULL,
+FOREIGN KEY (playwright_id) REFERENCES playwrights(id)
 
 );
 
@@ -20,7 +20,7 @@ VALUES
 ('Arthur Miller' ,1991),
 ('Kennedy Fredick',1992);
 INSERT INTO
-plays(title,year,playwrights_id)
+plays(title,year,playwright_id)
 VALUES
 ("All my Sons",1947,(SELECT id FROM playwrights WHERE name='Arthur Miller')),
 ('Long Day Journey',1948,(SELECT id FROM playwrights WHERE name='Kennedy Fredick'));
