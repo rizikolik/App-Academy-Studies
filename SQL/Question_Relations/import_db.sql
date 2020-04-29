@@ -9,8 +9,8 @@ CREATE TABLE questions(
 id INTEGER PRIMARY KEY, 
 title TEXT NOT NULL,
 body TEXT NUT NULL,
-ass_author_id INTEGER NOT NULL,
-FOREIGN KEY (ass_author_id) REFERENCES authors(id)
+user_id INTEGER NOT NULL,
+FOREIGN KEY (user_id) REFERENCES users(id)
 );
 CREATE TABLE question_follows (
 	id INTEGER PRIMARY KEY,
@@ -28,8 +28,9 @@ parent_id INTEGER,
 question_id INTEGER NOT NULL,
 FOREIGN KEY (owner_id) REFERENCES users(id),
 FOREIGN KEY (parent_id) REFERENCES replies(id),
-FOREIGN KEY (question_key) REFERENCES questions(id)
+FOREIGN KEY (question_id) REFERENCES questions(id)
 );
+
 CREATE TABLE questions_likes(
 id INTEGER PRIMARY KEY,
 question_id INTEGER NOT NULL,
@@ -47,7 +48,7 @@ VALUES
 ("henry","gambler");
 INSERT INTO 
 questions
-(title,body,ass_author_id)
+(title,body,user_id)
 VALUES
 ("How long?","how long does it take to complete full curriculum?",1),
 ("how much?","how much time should you spent on curriculum for a better career?",3),
@@ -65,13 +66,14 @@ VALUES
 
 INSERT INTO
 replies
-(body ,owner_id,question_id, parent_id )
+
+(body ,owner_id,parent_id,question_id)
 VALUES
-("It took fo me about 4 months to complete",2,1,NULL),
-(1, "I agree", 3, 1);
+("It took fo me about 4 months to complete",1,NULL,1),
+("I agree", 3, 1,2);
 
 INSERT INTO
-question_likes
+questions_likes
 (question_id,user_id)
 VALUES
 (3, 1);
