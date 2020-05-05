@@ -24,7 +24,7 @@ class Dog <ApplicationRecord
         foreign_key: :dog_id,
         class_name: :Toy
 
-        belongs_to :homes,
+        belongs_to :house,
         primary_key: :id,
         foreign_key: :house_id,
         class_name:  :House
