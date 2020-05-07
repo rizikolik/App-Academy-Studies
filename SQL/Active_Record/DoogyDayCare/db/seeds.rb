@@ -1,17 +1,17 @@
 
 p "creating houses"
-#House.destroy_all
-ActiveRecord::Base.connection.reset_pk_sequence!("houses")
-house1=House.create({name:"Home1"})
-house2=House.create({name:"Home2"})
+#Home.destroy_all
+#ActiveRecord::Base.connection.reset_pk_sequence!("houses")
+house1=Home.create({name:"Home1"})
+house2=Home.create({name:"Home2"})
 
 p "creating dogs"
 #Dog.destroy_all
-ActiveRecord::Base.connection.reset_pk_sequence!('dogs')
-dog1=Dog.create({name:"clifford",house_id:house1.id})
-dog2=Dog.create({name:"Snoopy", house_id:house2.id})
-100_000.times do
-    Dog.create!(name: Faker::Name.first_name,house_id:house1.id)
+#ActiveRecord::Base.connection.reset_pk_sequence!('dogs')
+dog1=Dog.create({name:"clifford",home_id:house1.id})
+dog2=Dog.create({name:"Snoopy", home_id:house2.id})
+#100_000.times do
+    #Dog.create!(name: Faker::Name.first_name,house_id:house1.id)
 
 
 #Toy.destroy_all

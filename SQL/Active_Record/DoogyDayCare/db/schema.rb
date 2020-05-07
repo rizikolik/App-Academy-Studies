@@ -18,6 +18,7 @@ ActiveRecord::Schema.define(version: 2020_05_07_194834) do
   end
 
   create_table "homes", force: :cascade do |t|
+    t.string "name", null: false
   end
 
   create_table "toys", force: :cascade do |t|
