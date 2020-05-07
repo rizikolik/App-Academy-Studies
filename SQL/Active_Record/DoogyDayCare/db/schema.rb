@@ -10,24 +10,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_05_01_124308) do
-
-  # These are extensions that must be enabled in order to support this database
-  enable_extension "plpgsql"
+ActiveRecord::Schema.define(version: 2020_05_07_194834) do
 
   create_table "dogs", force: :cascade do |t|
     t.string "name", null: false
-    t.integer "house_id", null: false
+    t.integer "home_id", null: false
   end
 
-  create_table "houses", force: :cascade do |t|
-    t.string "name", null: false
+  create_table "homes", force: :cascade do |t|
   end
 
   create_table "toys", force: :cascade do |t|
     t.string "name", null: false
     t.integer "dog_id", null: false
-    t.text "color", null: false
+    t.string "color", null: false
   end
 
 end
