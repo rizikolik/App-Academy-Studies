@@ -10,11 +10,12 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_05_07_194834) do
+ActiveRecord::Schema.define(version: 2020_05_09_200510) do
 
   create_table "dogs", force: :cascade do |t|
     t.string "name", null: false
     t.integer "home_id", null: false
+    t.index ["name"], name: "index_dogs_on_name"
   end
 
   create_table "homes", force: :cascade do |t|

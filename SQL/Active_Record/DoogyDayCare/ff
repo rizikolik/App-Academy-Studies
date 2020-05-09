@@ -1,0 +1,12 @@
+=> [[32m#<Dog:0x000055e19ea11960[0m id: [1;34m1[0m, name: [31m[1;31m"[0m[31mclifford[1;31m"[0m[31m[0m, home_id: [1;34m33[0m[32m>[0m,
+ [32m#<Dog:0x000055e19eadf540[0m id: [1;34m2[0m, name: [31m[1;31m"[0m[31mSnoopy[1;31m"[0m[31m[0m, home_id: [1;34m34[0m[32m>[0m,
+ [32m#<Dog:0x000055e19eadf1d0[0m id: [1;34m3[0m, name: [31m[1;31m"[0m[31mIrina[1;31m"[0m[31m[0m, home_id: [1;34m33[0m[32m>[0m,
+ [32m#<Dog:0x000055e19eadefc8[0m id: [1;34m4[0m, name: [31m[1;31m"[0m[31mBrittney[1;31m"[0m[31m[0m, home_id: [1;34m33[0m[32m>[0m,
+ [32m#<Dog:0x000055e19eaded98[0m id: [1;34m5[0m, name: [31m[1;31m"[0m[31mMarcelle[1;31m"[0m[31m[0m, home_id: [1;34m33[0m[32m>[0m,
+ [32m#<Dog:0x000055e19eade848[0m id: [1;34m6[0m, name: [31m[1;31m"[0m[31mChad[1;31m"[0m[31m[0m, home_id: [1;34m33[0m[32m>[0m,
+ [32m#<Dog:0x000055e19eade528[0m id: [1;34m7[0m, name: [31m[1;31m"[0m[31mBernie[1;31m"[0m[31m[0m, home_id: [1;34m33[0m[32m>[0m,
+ [32m#<Dog:0x000055e19eade0a0[0m id: [1;34m8[0m, name: [31m[1;31m"[0m[31mWillis[1;31m"[0m[31m[0m, home_id: [1;34m33[0m[32m>[0m,
+ [32m#<Dog:0x000055e19eadd8d0[0m id: [1;34m9[0m, name: [31m[1;31m"[0m[31mFritz[1;31m"[0m[31m[0m, home_id: [1;34m33[0m[32m>[0m,
+ [32m#<Dog:0x000055e19eadd678[0m id: [1;34m10[0m, name: [31m[1;31m"[0m[31mSee[1;31m"[0m[31m[0m, home_id: [1;34m33[0m[32m>[0m,
+ [32m#<Dog:0x000055e19eadd268[0m id: [1;34m11[0m, name: [31m[1;31m"[0m[31mLeonel[1;31m"[0m[31m[0m, home_id: [1;34m33[0m[32m>[0m,
+ [32m#<Dog:0x000055e19eadd100[0m id: [1;34m12[0m, name: [31m[1;31m"[0m[31mJoseph[1;31m"[0m[31m[0m, home_id: [1;34m33[0m[32m>[0m]
