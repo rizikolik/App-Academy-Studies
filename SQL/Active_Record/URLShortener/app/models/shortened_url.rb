@@ -16,6 +16,18 @@ class ShortenedUrl < ApplicationRecord
     primary_key: :id,
     foreign_key: :shortened_url_id,
     class_name: :Visit
+
+    has_many :tag_topics,
+    through: :taggings,
+    source: :tag_topic
+    
+    has_many :taggings,
+    primary_key: :id,
+    foreign_key: :shortened_url_id,
+    class_name: :Tagging
+
+   
+
   
 
 
@@ -35,6 +47,11 @@ class ShortenedUrl < ApplicationRecord
 
             end
 
+            def self.prune(time)
+                visits.where('created_at > ?',time.minutes.ago).length
+
+            end
+
           
 
             def num_clicks
@@ -49,6 +66,25 @@ class ShortenedUrl < ApplicationRecord
                 visits.select('user_id').where('created_at > ?', 10.minutes.ago).distinct.count
 
             end
+            def no_spamming
+                last_minute = ShortenedUrl
+                .where('created_at >= ?', 1.minute.ago) #Check this users submitted urls length in last 1 minute.
+                .where(submitter_id: submitter_id)
+                .length
+
+                errors[:maximum] << 'of five short urls per minute' if last_minute >= 5
+            end
+            def nonpremium_max
+                return if User.find(self.submitter_id).premium
+                total = ShortenedUrl
+                .where(submitter_id: submitter_id And )
+                .length
+
+                errors[:Only] << 'You have to be a premium member for  more..' if total >=5
+            end
+
+           
+             
             
 
    
