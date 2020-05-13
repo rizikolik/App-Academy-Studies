@@ -16,3 +16,173 @@ Migrating to CreateUser (20200513201650)
   [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
   [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
   [1m[35m (0.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreatePoll (20200513203436)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE TABLE "polls" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar NOT NULL, "author_id" integer NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE  INDEX "index_polls_on_author_id" ON "polls" ("author_id")[0m
+  [1m[36mprimary::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20200513203436"]]
+  [1m[35m (3.7ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateQuestion (20200513203445)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.9ms)[0m  [1m[35mCREATE TABLE "questions" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "text" varchar NOT NULL, "poll_id" integer NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.6ms)[0m  [1m[35mCREATE  INDEX "index_questions_on_poll_id" ON "questions" ("poll_id")[0m
+  [1m[36mprimary::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20200513203445"]]
+  [1m[35m (2.9ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateAnswerChoice (20200513203458)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (1.6ms)[0m  [1m[35mCREATE TABLE "answer_choices" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "text" varchar NOT NULL, "question_id" integer NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE  INDEX "index_answer_choices_on_question_id" ON "answer_choices" ("question_id")[0m
+  [1m[36mprimary::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20200513203458"]]
+  [1m[35m (4.1ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateResponse (20200513203507)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE TABLE "responses" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "answer_choice_id" integer NOT NULL, "respondent_id" integer NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE  INDEX "index_responses_on_answer_choice_id" ON "responses" ("answer_choice_id")[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE  INDEX "index_responses_on_respondent_id" ON "responses" ("respondent_id")[0m
+  [1m[36mprimary::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20200513203507"]]
+  [1m[35m (3.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mPoll Load (0.2ms)[0m  [1m[34mSELECT "polls".* FROM "polls"[0m
+  [1m[36mQuestion Load (0.2ms)[0m  [1m[34mSELECT "questions".* FROM "questions"[0m
+  [1m[36mAnswerChoice Load (0.2ms)[0m  [1m[34mSELECT "answer_choices".* FROM "answer_choices"[0m
+  [1m[36mResponse Load (0.2ms)[0m  [1m[34mSELECT "responses".* FROM "responses"[0m
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Markov"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("username", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["username", "Markov"], ["created_at", "2020-05-13 21:00:25.117211"], ["updated_at", "2020-05-13 21:00:25.117211"]]
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Gizmo"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.1ms)[0m  [1m[32mINSERT INTO "users" ("username", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["username", "Gizmo"], ["created_at", "2020-05-13 21:00:25.121491"], ["updated_at", "2020-05-13 21:00:25.121491"]]
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mPoll Load (0.2ms)[0m  [1m[34mSELECT "polls".* FROM "polls"[0m
+  [1m[36mQuestion Load (0.1ms)[0m  [1m[34mSELECT "questions".* FROM "questions"[0m
+  [1m[36mAnswerChoice Load (0.1ms)[0m  [1m[34mSELECT "answer_choices".* FROM "answer_choices"[0m
+  [1m[36mResponse Load (0.1ms)[0m  [1m[34mSELECT "responses".* FROM "responses"[0m
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Markov"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("username", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["username", "Markov"], ["created_at", "2020-05-13 21:01:56.242879"], ["updated_at", "2020-05-13 21:01:56.242879"]]
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Gizmo"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.1ms)[0m  [1m[32mINSERT INTO "users" ("username", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["username", "Gizmo"], ["created_at", "2020-05-13 21:01:56.246744"], ["updated_at", "2020-05-13 21:01:56.246744"]]
+  [1m[36mPoll Create (0.2ms)[0m  [1m[32mINSERT INTO "polls" ("title", "author_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Cats Poll"], ["author_id", 1], ["created_at", "2020-05-13 21:01:56.254876"], ["updated_at", "2020-05-13 21:01:56.254876"]]
+  [1m[36mQuestion Create (0.2ms)[0m  [1m[32mINSERT INTO "questions" ("text", "poll_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["text", "What Cat Is Cutest?"], ["poll_id", 1], ["created_at", "2020-05-13 21:01:56.262355"], ["updated_at", "2020-05-13 21:01:56.262355"]]
+  [1m[36mAnswerChoice Create (0.2ms)[0m  [1m[32mINSERT INTO "answer_choices" ("text", "question_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["text", "Markov"], ["question_id", 1], ["created_at", "2020-05-13 21:01:56.269694"], ["updated_at", "2020-05-13 21:01:56.269694"]]
+  [1m[36mAnswerChoice Create (0.1ms)[0m  [1m[32mINSERT INTO "answer_choices" ("text", "question_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["text", "Curie"], ["question_id", 1], ["created_at", "2020-05-13 21:01:56.271819"], ["updated_at", "2020-05-13 21:01:56.271819"]]
+  [1m[36mAnswerChoice Create (0.1ms)[0m  [1m[32mINSERT INTO "answer_choices" ("text", "question_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["text", "Sally"], ["question_id", 1], ["created_at", "2020-05-13 21:01:56.273673"], ["updated_at", "2020-05-13 21:01:56.273673"]]
+  [1m[36mQuestion Create (0.1ms)[0m  [1m[32mINSERT INTO "questions" ("text", "poll_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["text", "Which Toy Is Most Fun?"], ["poll_id", 1], ["created_at", "2020-05-13 21:01:56.275565"], ["updated_at", "2020-05-13 21:01:56.275565"]]
+  [1m[36mAnswerChoice Create (0.1ms)[0m  [1m[32mINSERT INTO "answer_choices" ("text", "question_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["text", "String"], ["question_id", 2], ["created_at", "2020-05-13 21:01:56.277461"], ["updated_at", "2020-05-13 21:01:56.277461"]]
+  [1m[36mAnswerChoice Create (0.1ms)[0m  [1m[32mINSERT INTO "answer_choices" ("text", "question_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["text", "Ball"], ["question_id", 2], ["created_at", "2020-05-13 21:01:56.279298"], ["updated_at", "2020-05-13 21:01:56.279298"]]
+  [1m[36mAnswerChoice Create (0.1ms)[0m  [1m[32mINSERT INTO "answer_choices" ("text", "question_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["text", "Bird"], ["question_id", 2], ["created_at", "2020-05-13 21:01:56.281065"], ["updated_at", "2020-05-13 21:01:56.281065"]]
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mPoll Load (0.1ms)[0m  [1m[34mSELECT "polls".* FROM "polls"[0m
+  [1m[36mQuestion Load (0.1ms)[0m  [1m[34mSELECT "questions".* FROM "questions"[0m
+  [1m[36mAnswerChoice Load (0.1ms)[0m  [1m[34mSELECT "answer_choices".* FROM "answer_choices"[0m
+  [1m[36mResponse Load (0.2ms)[0m  [1m[34mSELECT "responses".* FROM "responses"[0m
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Markov"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("username", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["username", "Markov"], ["created_at", "2020-05-13 21:02:19.719455"], ["updated_at", "2020-05-13 21:02:19.719455"]]
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Gizmo"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.1ms)[0m  [1m[32mINSERT INTO "users" ("username", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["username", "Gizmo"], ["created_at", "2020-05-13 21:02:19.724228"], ["updated_at", "2020-05-13 21:02:19.724228"]]
+  [1m[36mPoll Create (0.2ms)[0m  [1m[32mINSERT INTO "polls" ("title", "author_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Cats Poll"], ["author_id", 1], ["created_at", "2020-05-13 21:02:19.732410"], ["updated_at", "2020-05-13 21:02:19.732410"]]
+  [1m[36mQuestion Create (0.2ms)[0m  [1m[32mINSERT INTO "questions" ("text", "poll_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["text", "What Cat Is Cutest?"], ["poll_id", 1], ["created_at", "2020-05-13 21:02:19.741107"], ["updated_at", "2020-05-13 21:02:19.741107"]]
+  [1m[36mAnswerChoice Create (0.2ms)[0m  [1m[32mINSERT INTO "answer_choices" ("text", "question_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["text", "Markov"], ["question_id", 1], ["created_at", "2020-05-13 21:02:19.749516"], ["updated_at", "2020-05-13 21:02:19.749516"]]
+  [1m[36mAnswerChoice Create (0.1ms)[0m  [1m[32mINSERT INTO "answer_choices" ("text", "question_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["text", "Curie"], ["question_id", 1], ["created_at", "2020-05-13 21:02:19.752585"], ["updated_at", "2020-05-13 21:02:19.752585"]]
+  [1m[36mAnswerChoice Create (0.1ms)[0m  [1m[32mINSERT INTO "answer_choices" ("text", "question_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["text", "Sally"], ["question_id", 1], ["created_at", "2020-05-13 21:02:19.754591"], ["updated_at", "2020-05-13 21:02:19.754591"]]
+  [1m[36mQuestion Create (0.1ms)[0m  [1m[32mINSERT INTO "questions" ("text", "poll_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["text", "Which Toy Is Most Fun?"], ["poll_id", 1], ["created_at", "2020-05-13 21:02:19.756651"], ["updated_at", "2020-05-13 21:02:19.756651"]]
+  [1m[36mAnswerChoice Create (0.1ms)[0m  [1m[32mINSERT INTO "answer_choices" ("text", "question_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["text", "String"], ["question_id", 2], ["created_at", "2020-05-13 21:02:19.758722"], ["updated_at", "2020-05-13 21:02:19.758722"]]
+  [1m[36mAnswerChoice Create (0.1ms)[0m  [1m[32mINSERT INTO "answer_choices" ("text", "question_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["text", "Ball"], ["question_id", 2], ["created_at", "2020-05-13 21:02:19.760713"], ["updated_at", "2020-05-13 21:02:19.760713"]]
+  [1m[36mAnswerChoice Create (0.1ms)[0m  [1m[32mINSERT INTO "answer_choices" ("text", "question_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["text", "Bird"], ["question_id", 2], ["created_at", "2020-05-13 21:02:19.762656"], ["updated_at", "2020-05-13 21:02:19.762656"]]
+  [1m[36mResponse Create (0.2ms)[0m  [1m[32mINSERT INTO "responses" ("answer_choice_id", "respondent_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["answer_choice_id", 3], ["respondent_id", 2], ["created_at", "2020-05-13 21:02:19.770733"], ["updated_at", "2020-05-13 21:02:19.770733"]]
+  [1m[36mResponse Create (0.1ms)[0m  [1m[32mINSERT INTO "responses" ("answer_choice_id", "respondent_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["answer_choice_id", 4], ["respondent_id", 2], ["created_at", "2020-05-13 21:02:19.773902"], ["updated_at", "2020-05-13 21:02:19.773902"]]
+  [1m[35m (2.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mUser Destroy (0.3ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 1]]
+  [1m[36mUser Destroy (0.1ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 2]]
+  [1m[36mPoll Load (0.2ms)[0m  [1m[34mSELECT "polls".* FROM "polls"[0m
+  [1m[36mPoll Destroy (0.2ms)[0m  [1m[31mDELETE FROM "polls" WHERE "polls"."id" = ?[0m  [["id", 1]]
+  [1m[36mQuestion Load (0.2ms)[0m  [1m[34mSELECT "questions".* FROM "questions"[0m
+  [1m[36mQuestion Destroy (0.2ms)[0m  [1m[31mDELETE FROM "questions" WHERE "questions"."id" = ?[0m  [["id", 1]]
+  [1m[36mQuestion Destroy (0.1ms)[0m  [1m[31mDELETE FROM "questions" WHERE "questions"."id" = ?[0m  [["id", 2]]
+  [1m[36mAnswerChoice Load (0.2ms)[0m  [1m[34mSELECT "answer_choices".* FROM "answer_choices"[0m
+  [1m[36mAnswerChoice Destroy (0.2ms)[0m  [1m[31mDELETE FROM "answer_choices" WHERE "answer_choices"."id" = ?[0m  [["id", 1]]
+  [1m[36mAnswerChoice Destroy (0.1ms)[0m  [1m[31mDELETE FROM "answer_choices" WHERE "answer_choices"."id" = ?[0m  [["id", 2]]
+  [1m[36mAnswerChoice Destroy (0.1ms)[0m  [1m[31mDELETE FROM "answer_choices" WHERE "answer_choices"."id" = ?[0m  [["id", 3]]
+  [1m[36mAnswerChoice Destroy (0.1ms)[0m  [1m[31mDELETE FROM "answer_choices" WHERE "answer_choices"."id" = ?[0m  [["id", 4]]
+  [1m[36mAnswerChoice Destroy (0.1ms)[0m  [1m[31mDELETE FROM "answer_choices" WHERE "answer_choices"."id" = ?[0m  [["id", 5]]
+  [1m[36mAnswerChoice Destroy (0.1ms)[0m  [1m[31mDELETE FROM "answer_choices" WHERE "answer_choices"."id" = ?[0m  [["id", 6]]
+  [1m[36mResponse Load (0.1ms)[0m  [1m[34mSELECT "responses".* FROM "responses"[0m
+  [1m[36mResponse Destroy (0.2ms)[0m  [1m[31mDELETE FROM "responses" WHERE "responses"."id" = ?[0m  [["id", 1]]
+  [1m[36mResponse Destroy (0.1ms)[0m  [1m[31mDELETE FROM "responses" WHERE "responses"."id" = ?[0m  [["id", 2]]
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Markov"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("username", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["username", "Markov"], ["created_at", "2020-05-13 21:02:54.169608"], ["updated_at", "2020-05-13 21:02:54.169608"]]
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Gizmo"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.1ms)[0m  [1m[32mINSERT INTO "users" ("username", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["username", "Gizmo"], ["created_at", "2020-05-13 21:02:54.173276"], ["updated_at", "2020-05-13 21:02:54.173276"]]
+  [1m[36mPoll Create (0.1ms)[0m  [1m[32mINSERT INTO "polls" ("title", "author_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Cats Poll"], ["author_id", 3], ["created_at", "2020-05-13 21:02:54.176523"], ["updated_at", "2020-05-13 21:02:54.176523"]]
+  [1m[36mQuestion Create (0.1ms)[0m  [1m[32mINSERT INTO "questions" ("text", "poll_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["text", "What Cat Is Cutest?"], ["poll_id", 2], ["created_at", "2020-05-13 21:02:54.178894"], ["updated_at", "2020-05-13 21:02:54.178894"]]
+  [1m[36mAnswerChoice Create (0.2ms)[0m  [1m[32mINSERT INTO "answer_choices" ("text", "question_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["text", "Markov"], ["question_id", 3], ["created_at", "2020-05-13 21:02:54.181160"], ["updated_at", "2020-05-13 21:02:54.181160"]]
+  [1m[36mAnswerChoice Create (0.1ms)[0m  [1m[32mINSERT INTO "answer_choices" ("text", "question_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["text", "Curie"], ["question_id", 3], ["created_at", "2020-05-13 21:02:54.183039"], ["updated_at", "2020-05-13 21:02:54.183039"]]
+  [1m[36mAnswerChoice Create (0.1ms)[0m  [1m[32mINSERT INTO "answer_choices" ("text", "question_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["text", "Sally"], ["question_id", 3], ["created_at", "2020-05-13 21:02:54.184791"], ["updated_at", "2020-05-13 21:02:54.184791"]]
+  [1m[36mQuestion Create (0.1ms)[0m  [1m[32mINSERT INTO "questions" ("text", "poll_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["text", "Which Toy Is Most Fun?"], ["poll_id", 2], ["created_at", "2020-05-13 21:02:54.186602"], ["updated_at", "2020-05-13 21:02:54.186602"]]
+  [1m[36mAnswerChoice Create (0.1ms)[0m  [1m[32mINSERT INTO "answer_choices" ("text", "question_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["text", "String"], ["question_id", 4], ["created_at", "2020-05-13 21:02:54.188529"], ["updated_at", "2020-05-13 21:02:54.188529"]]
+  [1m[36mAnswerChoice Create (0.1ms)[0m  [1m[32mINSERT INTO "answer_choices" ("text", "question_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["text", "Ball"], ["question_id", 4], ["created_at", "2020-05-13 21:02:54.190399"], ["updated_at", "2020-05-13 21:02:54.190399"]]
+  [1m[36mAnswerChoice Create (0.1ms)[0m  [1m[32mINSERT INTO "answer_choices" ("text", "question_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["text", "Bird"], ["question_id", 4], ["created_at", "2020-05-13 21:02:54.192115"], ["updated_at", "2020-05-13 21:02:54.192115"]]
+  [1m[36mResponse Create (0.1ms)[0m  [1m[32mINSERT INTO "responses" ("answer_choice_id", "respondent_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["answer_choice_id", 9], ["respondent_id", 4], ["created_at", "2020-05-13 21:02:54.194387"], ["updated_at", "2020-05-13 21:02:54.194387"]]
+  [1m[36mResponse Create (0.1ms)[0m  [1m[32mINSERT INTO "responses" ("answer_choice_id", "respondent_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["answer_choice_id", 10], ["respondent_id", 4], ["created_at", "2020-05-13 21:02:54.196225"], ["updated_at", "2020-05-13 21:02:54.196225"]]
+  [1m[35m (2.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mUser Destroy (0.3ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 3]]
+  [1m[36mUser Destroy (0.1ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 4]]
+  [1m[36mPoll Load (0.2ms)[0m  [1m[34mSELECT "polls".* FROM "polls"[0m
+  [1m[36mPoll Destroy (0.2ms)[0m  [1m[31mDELETE FROM "polls" WHERE "polls"."id" = ?[0m  [["id", 2]]
+  [1m[36mQuestion Load (0.2ms)[0m  [1m[34mSELECT "questions".* FROM "questions"[0m
+  [1m[36mQuestion Destroy (0.2ms)[0m  [1m[31mDELETE FROM "questions" WHERE "questions"."id" = ?[0m  [["id", 3]]
+  [1m[36mQuestion Destroy (0.1ms)[0m  [1m[31mDELETE FROM "questions" WHERE "questions"."id" = ?[0m  [["id", 4]]
+  [1m[36mAnswerChoice Load (0.2ms)[0m  [1m[34mSELECT "answer_choices".* FROM "answer_choices"[0m
+  [1m[36mAnswerChoice Destroy (0.2ms)[0m  [1m[31mDELETE FROM "answer_choices" WHERE "answer_choices"."id" = ?[0m  [["id", 7]]
+  [1m[36mAnswerChoice Destroy (0.1ms)[0m  [1m[31mDELETE FROM "answer_choices" WHERE "answer_choices"."id" = ?[0m  [["id", 8]]
+  [1m[36mAnswerChoice Destroy (0.1ms)[0m  [1m[31mDELETE FROM "answer_choices" WHERE "answer_choices"."id" = ?[0m  [["id", 9]]
+  [1m[36mAnswerChoice Destroy (0.1ms)[0m  [1m[31mDELETE FROM "answer_choices" WHERE "answer_choices"."id" = ?[0m  [["id", 10]]
+  [1m[36mAnswerChoice Destroy (0.1ms)[0m  [1m[31mDELETE FROM "answer_choices" WHERE "answer_choices"."id" = ?[0m  [["id", 11]]
+  [1m[36mAnswerChoice Destroy (0.1ms)[0m  [1m[31mDELETE FROM "answer_choices" WHERE "answer_choices"."id" = ?[0m  [["id", 12]]
+  [1m[36mResponse Load (0.2ms)[0m  [1m[34mSELECT "responses".* FROM "responses"[0m
+  [1m[36mResponse Destroy (0.2ms)[0m  [1m[31mDELETE FROM "responses" WHERE "responses"."id" = ?[0m  [["id", 3]]
+  [1m[36mResponse Destroy (0.1ms)[0m  [1m[31mDELETE FROM "responses" WHERE "responses"."id" = ?[0m  [["id", 4]]
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Markov"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("username", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["username", "Markov"], ["created_at", "2020-05-13 21:03:37.229459"], ["updated_at", "2020-05-13 21:03:37.229459"]]
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Gizmo"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.1ms)[0m  [1m[32mINSERT INTO "users" ("username", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["username", "Gizmo"], ["created_at", "2020-05-13 21:03:37.232819"], ["updated_at", "2020-05-13 21:03:37.232819"]]
+  [1m[36mPoll Create (0.1ms)[0m  [1m[32mINSERT INTO "polls" ("title", "author_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Cats Poll"], ["author_id", 5], ["created_at", "2020-05-13 21:03:37.235856"], ["updated_at", "2020-05-13 21:03:37.235856"]]
+  [1m[36mQuestion Create (0.1ms)[0m  [1m[32mINSERT INTO "questions" ("text", "poll_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["text", "What Cat Is Cutest?"], ["poll_id", 3], ["created_at", "2020-05-13 21:03:37.238107"], ["updated_at", "2020-05-13 21:03:37.238107"]]
+  [1m[36mAnswerChoice Create (0.1ms)[0m  [1m[32mINSERT INTO "answer_choices" ("text", "question_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["text", "Markov"], ["question_id", 5], ["created_at", "2020-05-13 21:03:37.240258"], ["updated_at", "2020-05-13 21:03:37.240258"]]
+  [1m[36mAnswerChoice Create (0.1ms)[0m  [1m[32mINSERT INTO "answer_choices" ("text", "question_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["text", "Curie"], ["question_id", 5], ["created_at", "2020-05-13 21:03:37.242084"], ["updated_at", "2020-05-13 21:03:37.242084"]]
+  [1m[36mAnswerChoice Create (0.1ms)[0m  [1m[32mINSERT INTO "answer_choices" ("text", "question_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["text", "Sally"], ["question_id", 5], ["created_at", "2020-05-13 21:03:37.243782"], ["updated_at", "2020-05-13 21:03:37.243782"]]
+  [1m[36mQuestion Create (0.1ms)[0m  [1m[32mINSERT INTO "questions" ("text", "poll_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["text", "Which Toy Is Most Fun?"], ["poll_id", 3], ["created_at", "2020-05-13 21:03:37.245557"], ["updated_at", "2020-05-13 21:03:37.245557"]]
+  [1m[36mAnswerChoice Create (0.1ms)[0m  [1m[32mINSERT INTO "answer_choices" ("text", "question_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["text", "String"], ["question_id", 6], ["created_at", "2020-05-13 21:03:37.247427"], ["updated_at", "2020-05-13 21:03:37.247427"]]
+  [1m[36mAnswerChoice Create (0.1ms)[0m  [1m[32mINSERT INTO "answer_choices" ("text", "question_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["text", "Ball"], ["question_id", 6], ["created_at", "2020-05-13 21:03:37.249144"], ["updated_at", "2020-05-13 21:03:37.249144"]]
+  [1m[36mAnswerChoice Create (0.1ms)[0m  [1m[32mINSERT INTO "answer_choices" ("text", "question_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["text", "Bird"], ["question_id", 6], ["created_at", "2020-05-13 21:03:37.250827"], ["updated_at", "2020-05-13 21:03:37.250827"]]
+  [1m[36mResponse Create (0.1ms)[0m  [1m[32mINSERT INTO "responses" ("answer_choice_id", "respondent_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["answer_choice_id", 15], ["respondent_id", 6], ["created_at", "2020-05-13 21:03:37.252933"], ["updated_at", "2020-05-13 21:03:37.252933"]]
+  [1m[36mResponse Create (0.1ms)[0m  [1m[32mINSERT INTO "responses" ("answer_choice_id", "respondent_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["answer_choice_id", 16], ["respondent_id", 6], ["created_at", "2020-05-13 21:03:37.254734"], ["updated_at", "2020-05-13 21:03:37.254734"]]
+  [1m[35m (3.2ms)[0m  [1m[36mcommit transaction[0m
