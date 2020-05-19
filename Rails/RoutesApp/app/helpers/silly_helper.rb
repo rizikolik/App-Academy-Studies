@@ -1,0 +1,2 @@
+module SillyHelper
+end
