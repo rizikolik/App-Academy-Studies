@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  root "silly"
   get 'silly',to:'silly#fun'
 
   post 'silly', to:'silly#ask'
