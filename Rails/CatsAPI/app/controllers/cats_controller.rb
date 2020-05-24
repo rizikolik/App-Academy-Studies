@@ -3,6 +3,11 @@ class CatsController < ApplicationController
       @cats=Cat.all 
      
     end
+    def new
+    @cat=Cat.new  
+    end
+    def edit
+    end
    
     def show
         @cat=Cat.find(params[:id])
@@ -10,10 +15,20 @@ class CatsController < ApplicationController
      
     end
     def create
+      @cat=Cat.create(cat_params)
+      if @cat.save
+        redirect_to @cat
+      else
+        render 'new'
+      end
+
     end
     def update
     end
     def delete
+    end
+    def cat_params
+      params.require(:cat).permit(:name, :color)
     end
    
 end

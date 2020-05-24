@@ -1,7 +1,19 @@
 // Place all the styles related to the Cats controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
-body {
-  background: yellow;
-  color: black;
+.table {
+  h1 {
+    text-align: center;
+  }
+  table {
+    padding: 0.5em;
+    text-align: center;
+    margin: auto;
+    td {
+      padding: 1em;
+    }
+  }
+}
+footer {
+  text-align: center;
 }

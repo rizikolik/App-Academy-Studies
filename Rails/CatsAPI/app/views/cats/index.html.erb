@@ -1,11 +1,28 @@
-<p>
-<%=@cats.each do |cat|%>
-<ul>
-<li>
-<%=cat.name%>
-</li>
+<%=render "header"%>
+<div class="table">
+<h1>Listing All Cats</h1>
+<table>
+<tr>
+<th>Id </th>
+<th>Name </th>
+<th>Color </th>
+
+</tr>
 
 
-</ul>
-<%end%>
-</p>
+<% @cats.each do |cat| %>
+<tr>
+<td> <%= cat.id    %></td>
+<td> <%= cat.name  %></td>
+<td> <%= cat.color %></td>
+
+</tr>
+<% end %>
+</table>
+</div>
+<%=render "footer"%>
+
+
+
+
+
