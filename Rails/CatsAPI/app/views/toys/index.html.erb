@@ -1,0 +1,18 @@
+<h1>
+<%=@cat.name.capitalize%>'s Toys:
+</h1>
+<table>
+<tr>
+<th>Name</th>
+<th>Ttype</th>
+</tr>
+
+<% @toys.each do |toy|%>
+<tr> 
+<td><%=toy.name%></td>
+<td><%=toy.ttype%></td>
+</tr>
+<%end%>
+</table>
+
+</p>

@@ -15,12 +15,13 @@ class CatsController < ApplicationController
      
     end
     def create
+      
       @cat=Cat.create(cat_params)
       if @cat.save
-        redirect_to @cat
-      else
-        render 'new'
-      end
+     redirect_to @cat
+    else
+      render 'new'
+     end
 
     end
     def update
