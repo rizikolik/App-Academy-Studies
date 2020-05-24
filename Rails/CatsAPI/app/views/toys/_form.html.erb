@@ -1,0 +1,20 @@
+<%= form_with(model: [ @cat,@cat.toys.build ], local:true) do |form|%>
+
+
+  <p>
+    <%= form.label :name %><br>
+    <%= form.text_field :name %>
+  </p>
+ 
+  <p>
+  
+    <%= form.label :ttype %><br>
+    <%= form.text_field:ttype%>
+  </p>
+ 
+ 
+  <p>
+    <%= form.submit %>
+  </p>
+ 
+<% end %>

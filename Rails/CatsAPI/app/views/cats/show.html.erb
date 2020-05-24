@@ -1,3 +1,17 @@
-<p>
-<%=@cat%>
-</p>
+<h2><%=@cat.name.capitalize%>'s Specs</h2>
+<table>
+<tr>
+    <th>Name</th>
+     <th>Color</th>
+     <th>Id</th>
+    </tr>
+    <tr>
+<td><%=@cat.name %></td>
+<td><%=
+@cat.color%></td>
+<td><%=@cat.id%></td>
+</tr>
+
+
+
+</table>
