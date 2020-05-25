@@ -16,7 +16,6 @@ class CatsController < ApplicationController
      
     end
     def create
-      
       @cat=Cat.create(cat_params)
       if @cat.save
      redirect_to @cat
@@ -30,7 +29,7 @@ class CatsController < ApplicationController
     def delete
     end
     def cat_params
-      params.require(:cat).permit(:name, :color)
+      params.require(:cat).permit(:name, :color,:cat_id)
     end
    
 end

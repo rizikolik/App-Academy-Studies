@@ -11,7 +11,25 @@
 @cat.color%></td>
 <td><%=@cat.id%></td>
 </tr>
+</table>
+<h2>All Toys</h2>
+<table>
+<tr>
+    <th>Name</th>
+     <th>Type</th>
+     <th>Id</th>
+    </tr>
+    <%=@cat.toys.each do |toy|%>
+    <tr>
+<td><%=toy.name%></td>
+<td><%=toy.ttype%></td>
+<td><%=toy.id%></td>
+</tr>
+<%end%>
 
 
 
 </table>
+<%=link_to   "Go Back",:action=>:index %>
+
+
