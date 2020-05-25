@@ -1,29 +1,20 @@
 # CatAPI
 
-<img src="https://ai.github.io/size-limit/logo.svg" align="right"
-     alt="cat api by  rizikolik" width="120" height="178">
-
 Cat API is a basic rails app that helped me to build my skills .
 
 <p align="center">
-  <img src="./img/example.png" alt="Size Limit CLI" width="738">
+  <img src="./app/assets/images/3.png" alt="cat api by  rizikolik" width="738">
 </p>
 
 <p align="center">
-<img src="https://raw.githubusercontent.com/andresz1/size-limit-action/master/assets/pr.png"
-  alt="Size Limit comment in pull request about bundle size changes"
-  width="686" height="289">
+<img src="./app/assets/images/2.png" width="686" height="289">
 </p>
 
 <p align="center">
-  <img src="./img/why.png" alt="Bundle Analyzer example" width="650">
+  <img src="./app/assets/images/4.png"  width="650">
 </p>
-
 <p align="center">
-  <a href="https://evilmartians.com/?utm_source=size-limit">
-    <img src="https://evilmartians.com/badges/sponsored-by-evil-martians.svg"
-         alt="Sponsored by Evil Martians" width="236" height="54">
-  </a>
+  <img src="./app/assets/images/1.png"  width="650">
 </p>
 
 ## Usage
@@ -53,3 +44,4 @@ Cat API is a basic rails app that helped me to build my skills .
 5. Font Awesome
 6. Flash Messages for Notifications
 7. Sass
+8. Erb and Views in Rails
