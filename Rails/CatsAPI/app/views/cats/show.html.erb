@@ -32,6 +32,18 @@
 <a href="<%=new_cat_toy_url(@cat)%>"><input type="button" name="back"  value="Add New Toy"></a>
     </div>
 
+<div class="button">
+<div class="row">
+<div class="col">
+<button type="button" class="btn btn-info left"><i class="fas fa-arrow-left"></i><%= link_to 'Back', cats_path %></button>
+</div>
+<div class="col"><%= button_to  cat_path(@cat), method: :delete, data: {confirm: "Are you sure you want to Delete?" },class: 'right btn-mini btn-danger btn'  do%>
+<i class="fa fa-trash-o" aria-hidden="true">Delete</i>
+<%end%>
+</div>
+</div>
+</div>
+
 
 
 

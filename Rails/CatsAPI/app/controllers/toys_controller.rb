@@ -15,23 +15,21 @@ class ToysController < ApplicationController
     def edit
     end
     def create
-     puts "=================================="
-     puts params[:cat_id]
-
-     puts "=============================="
-        @cat=Cat.find(params[:cat_id])
+     @cat=Cat.find(params[:cat_id])
         @toy=@cat.toys.create(toy_params)
         if @toy.save
+            flash[:success] = 'Toy successfuly created!'
        redirect_to @cat
       else
+        @toy.errors.full_messages.each do|err|
+            flash[:danger] =err
+           end
         render 'new'
        end
   
       end
-    def update
-    end
-    def delete
-    end
+  
+  
     def toy_params
         params.require(:toy).permit(:name, :ttype,:cat_id)
     end

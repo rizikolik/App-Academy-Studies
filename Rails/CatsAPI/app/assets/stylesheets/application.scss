@@ -125,3 +125,14 @@ footer {
     font-size: 1.3em;
   }
 }
+.button {
+  .row {
+    margin: auto !important;
+    form {
+      text-align: right;
+    }
+  }
+  position: absolute;
+  bottom: 5em;
+  width: 100%;
+}
