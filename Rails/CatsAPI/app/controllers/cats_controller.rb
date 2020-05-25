@@ -18,8 +18,12 @@ class CatsController < ApplicationController
     def create
       @cat=Cat.create(cat_params)
       if @cat.save
+        flash[:success] = 'Cat successfuly created!'
      redirect_to @cat
     else
+     @cat.errors.full_messages.each do|err|
+      flash[:danger] =err
+     end
       render 'new'
      end
 
