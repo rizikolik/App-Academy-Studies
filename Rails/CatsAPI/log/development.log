@@ -13236,3 +13236,694 @@ Processing by CatsController#index as HTML
 Completed 200 OK in 35ms (Views: 18.4ms | ActiveRecord: 0.6ms | Allocations: 5222)
 
 
+Started GET "/" for ::1 at 2020-05-25 10:50:54 +0300
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by CatsController#index as HTML
+  Rendering cats/index.html.erb within layouts/application
+  Rendered cats/_header.html.erb (Duration: 0.9ms | Allocations: 92)
+  [1m[36mCat Load (3.5ms)[0m  [1m[34mSELECT "cats".* FROM "cats"[0m
+  ↳ app/views/cats/index.html.erb:16
+  Rendered cats/_footer.html.erb (Duration: 1.9ms | Allocations: 84)
+  Rendered cats/index.html.erb within layouts/application (Duration: 31.3ms | Allocations: 6186)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 237ms (Views: 206.4ms | ActiveRecord: 10.4ms | Allocations: 21619)
+
+
+Started GET "/cats/new" for ::1 at 2020-05-25 10:50:56 +0300
+Processing by CatsController#new as HTML
+  Rendering cats/new.html.erb within layouts/application
+  Rendered cats/_form.html.erb (Duration: 20.6ms | Allocations: 2505)
+  Rendered cats/new.html.erb within layouts/application (Duration: 23.2ms | Allocations: 2806)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 35ms (Views: 32.3ms | ActiveRecord: 0.0ms | Allocations: 6983)
+
+
+Started GET "/cats/1" for ::1 at 2020-05-25 10:51:00 +0300
+Processing by CatsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCat Load (1.2ms)[0m  [1m[34mSELECT "cats".* FROM "cats" WHERE "cats"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/cats_controller.rb:14:in `show'
+  Rendering cats/show.html.erb within layouts/application
+  [1m[36mToy Load (0.5ms)[0m  [1m[34mSELECT "toys".* FROM "toys" WHERE "toys"."cat_id" = $1[0m  [["cat_id", 1]]
+  ↳ app/views/cats/show.html.erb:22
+  Rendered cats/show.html.erb within layouts/application (Duration: 37.5ms | Allocations: 4544)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 57ms (Views: 43.8ms | ActiveRecord: 4.7ms | Allocations: 9661)
+
+
+Started GET "/cats" for ::1 at 2020-05-25 10:51:02 +0300
+Processing by CatsController#index as HTML
+  Rendering cats/index.html.erb within layouts/application
+  Rendered cats/_header.html.erb (Duration: 0.1ms | Allocations: 6)
+  [1m[36mCat Load (0.5ms)[0m  [1m[34mSELECT "cats".* FROM "cats"[0m
+  ↳ app/views/cats/index.html.erb:16
+  Rendered cats/_footer.html.erb (Duration: 0.1ms | Allocations: 5)
+  Rendered cats/index.html.erb within layouts/application (Duration: 6.6ms | Allocations: 1207)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 23ms (Views: 20.6ms | ActiveRecord: 0.5ms | Allocations: 5256)
+
+
+Started GET "/cats" for ::1 at 2020-05-25 10:51:42 +0300
+Processing by CatsController#index as HTML
+  Rendering cats/index.html.erb within layouts/application
+  Rendered cats/_header.html.erb (Duration: 0.4ms | Allocations: 89)
+  [1m[36mCat Load (0.4ms)[0m  [1m[34mSELECT "cats".* FROM "cats"[0m
+  ↳ app/views/cats/index.html.erb:16
+  Rendered cats/_footer.html.erb (Duration: 0.4ms | Allocations: 81)
+  Rendered cats/index.html.erb within layouts/application (Duration: 10.7ms | Allocations: 1938)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 44ms (Views: 42.0ms | ActiveRecord: 0.4ms | Allocations: 6885)
+
+
+Started GET "/cats" for ::1 at 2020-05-25 10:51:44 +0300
+Processing by CatsController#index as HTML
+  Rendering cats/index.html.erb within layouts/application
+  Rendered cats/_header.html.erb (Duration: 0.0ms | Allocations: 6)
+  [1m[36mCat Load (0.4ms)[0m  [1m[34mSELECT "cats".* FROM "cats"[0m
+  ↳ app/views/cats/index.html.erb:16
+  Rendered cats/_footer.html.erb (Duration: 0.1ms | Allocations: 5)
+  Rendered cats/index.html.erb within layouts/application (Duration: 4.3ms | Allocations: 1203)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 15ms (Views: 13.3ms | ActiveRecord: 0.4ms | Allocations: 5220)
+
+
+Started GET "/cats/1" for ::1 at 2020-05-25 10:51:46 +0300
+Processing by CatsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCat Load (0.5ms)[0m  [1m[34mSELECT "cats".* FROM "cats" WHERE "cats"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/cats_controller.rb:14:in `show'
+  Rendering cats/show.html.erb within layouts/application
+  [1m[36mToy Load (0.4ms)[0m  [1m[34mSELECT "toys".* FROM "toys" WHERE "toys"."cat_id" = $1[0m  [["cat_id", 1]]
+  ↳ app/views/cats/show.html.erb:22
+  Rendered cats/show.html.erb within layouts/application (Duration: 19.7ms | Allocations: 4055)
+Completed 500 Internal Server Error in 28ms (ActiveRecord: 0.9ms | Allocations: 5329)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"index", :controller=>"toys", :id=>"1"}):
+    31: 
+    32: </table>
+    33: <%=link_to   "Go Back",:action=>:index %>
+    34: <%=link_to "Add New Toy",controller:"toys",action:"index"%>
+  
+app/views/cats/show.html.erb:34
+Started GET "/cats/1" for ::1 at 2020-05-25 10:52:28 +0300
+Processing by CatsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCat Load (0.4ms)[0m  [1m[34mSELECT "cats".* FROM "cats" WHERE "cats"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/cats_controller.rb:14:in `show'
+  Rendering cats/show.html.erb within layouts/application
+  [1m[36mToy Load (0.3ms)[0m  [1m[34mSELECT "toys".* FROM "toys" WHERE "toys"."cat_id" = $1[0m  [["cat_id", 1]]
+  ↳ app/views/cats/show.html.erb:22
+  Rendered cats/show.html.erb within layouts/application (Duration: 3.2ms | Allocations: 2163)
+Completed 500 Internal Server Error in 18ms (ActiveRecord: 0.7ms | Allocations: 4074)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"index", :controller=>"cat#toys", :id=>"1"}):
+    31: 
+    32: </table>
+    33: <%=link_to   "Go Back",:action=>:index %>
+    34: <%=link_to "Add New Toy",controller:"cat#toys",action:"index"%>
+  
+app/views/cats/show.html.erb:34
+Started GET "/cats/1" for ::1 at 2020-05-25 10:52:35 +0300
+Processing by CatsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCat Load (0.4ms)[0m  [1m[34mSELECT "cats".* FROM "cats" WHERE "cats"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/cats_controller.rb:14:in `show'
+  Rendering cats/show.html.erb within layouts/application
+  [1m[36mToy Load (0.4ms)[0m  [1m[34mSELECT "toys".* FROM "toys" WHERE "toys"."cat_id" = $1[0m  [["cat_id", 1]]
+  ↳ app/views/cats/show.html.erb:22
+  Rendered cats/show.html.erb within layouts/application (Duration: 4.3ms | Allocations: 2142)
+Completed 500 Internal Server Error in 18ms (ActiveRecord: 0.8ms | Allocations: 4010)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"index", :controller=>"cat/toys", :id=>"1"}):
+    31: 
+    32: </table>
+    33: <%=link_to   "Go Back",:action=>:index %>
+    34: <%=link_to "Add New Toy",controller:"cat/toys",action:"index"%>
+  
+app/views/cats/show.html.erb:34
+Started GET "/cats/1" for ::1 at 2020-05-25 10:52:51 +0300
+Processing by CatsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCat Load (0.3ms)[0m  [1m[34mSELECT "cats".* FROM "cats" WHERE "cats"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/cats_controller.rb:14:in `show'
+  Rendering cats/show.html.erb within layouts/application
+  [1m[36mToy Load (0.5ms)[0m  [1m[34mSELECT "toys".* FROM "toys" WHERE "toys"."cat_id" = $1[0m  [["cat_id", 1]]
+  ↳ app/views/cats/show.html.erb:22
+  Rendered cats/show.html.erb within layouts/application (Duration: 477.1ms | Allocations: 148415)
+Completed 500 Internal Server Error in 484ms (ActiveRecord: 0.8ms | Allocations: 150285)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `toys' for #<#<Class:0x000055c804b11580>:0x000055c804b151a8>
+Did you mean?  to_s):
+    31: 
+    32: </table>
+    33: <%=link_to   "Go Back",:action=>:index %>
+    34: <%=link_to "Add New Toy",@cat/toys%>
+  
+app/views/cats/show.html.erb:34
+Started GET "/" for ::1 at 2020-05-25 13:11:45 +0300
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by CatsController#index as HTML
+  Rendering cats/index.html.erb within layouts/application
+  Rendered cats/_header.html.erb (Duration: 0.3ms | Allocations: 92)
+  [1m[36mCat Load (0.6ms)[0m  [1m[34mSELECT "cats".* FROM "cats"[0m
+  ↳ app/views/cats/index.html.erb:16
+  Rendered cats/_footer.html.erb (Duration: 1.2ms | Allocations: 84)
+  Rendered cats/index.html.erb within layouts/application (Duration: 32.7ms | Allocations: 6186)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 80ms (Views: 54.4ms | ActiveRecord: 7.3ms | Allocations: 15536)
+
+
+Started GET "/cats/1" for ::1 at 2020-05-25 13:11:47 +0300
+Processing by CatsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCat Load (0.4ms)[0m  [1m[34mSELECT "cats".* FROM "cats" WHERE "cats"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/cats_controller.rb:14:in `show'
+  Rendering cats/show.html.erb within layouts/application
+  [1m[36mToy Load (2.7ms)[0m  [1m[34mSELECT "toys".* FROM "toys" WHERE "toys"."cat_id" = $1[0m  [["cat_id", 1]]
+  ↳ app/views/cats/show.html.erb:22
+  Rendered cats/show.html.erb within layouts/application (Duration: 33.6ms | Allocations: 7133)
+Completed 500 Internal Server Error in 42ms (ActiveRecord: 7.4ms | Allocations: 8879)
+
+
+  
+ActionView::Template::Error (undefined method `toys_path' for #<Cat:0x00005603ecd2ae10>):
+    31: 
+    32: </table>
+    33: <%=link_to   "Go Back",:action=>:index %>
+    34: <%=link_to "Add New Toy",@cat.toys_path(@cat)%>
+  
+app/views/cats/show.html.erb:34
+Started GET "/cats/1" for ::1 at 2020-05-25 13:12:24 +0300
+Processing by CatsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCat Load (0.4ms)[0m  [1m[34mSELECT "cats".* FROM "cats" WHERE "cats"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/cats_controller.rb:14:in `show'
+  Rendering cats/show.html.erb within layouts/application
+  Rendered cats/show.html.erb within layouts/application (Duration: 441.2ms | Allocations: 147657)
+Completed 500 Internal Server Error in 448ms (ActiveRecord: 0.4ms | Allocations: 149589)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `cat' for #<#<Class:0x00005603ec1383c8>:0x00005603ec1543c0>
+Did you mean?  @cat):
+    18:     <th>Name</th>
+    19:      <th>Type</th>
+    20:      <th>Id</th>
+    21:      <th><%=link_to "Add New Toy",cat.toys_path(cat)%></th>
+    22:     </tr>
+    23:     <%=@cat.toys.each do |toy|%>
+    24:     <tr>
+  
+app/views/cats/show.html.erb:21
+Started GET "/" for ::1 at 2020-05-25 13:12:27 +0300
+Processing by CatsController#index as HTML
+  Rendering cats/index.html.erb within layouts/application
+  Rendered cats/_header.html.erb (Duration: 0.3ms | Allocations: 89)
+  [1m[36mCat Load (0.4ms)[0m  [1m[34mSELECT "cats".* FROM "cats"[0m
+  ↳ app/views/cats/index.html.erb:16
+  Rendered cats/_footer.html.erb (Duration: 0.7ms | Allocations: 81)
+  Rendered cats/index.html.erb within layouts/application (Duration: 8.4ms | Allocations: 1933)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 21ms (Views: 19.1ms | ActiveRecord: 0.4ms | Allocations: 6305)
+
+
+Started GET "/" for ::1 at 2020-05-25 13:12:27 +0300
+Processing by CatsController#index as HTML
+  Rendering cats/index.html.erb within layouts/application
+  Rendered cats/_header.html.erb (Duration: 0.0ms | Allocations: 6)
+  [1m[36mCat Load (0.4ms)[0m  [1m[34mSELECT "cats".* FROM "cats"[0m
+  ↳ app/views/cats/index.html.erb:16
+  Rendered cats/_footer.html.erb (Duration: 0.1ms | Allocations: 5)
+  Rendered cats/index.html.erb within layouts/application (Duration: 5.7ms | Allocations: 1203)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 16ms (Views: 14.1ms | ActiveRecord: 0.4ms | Allocations: 5214)
+
+
+Started GET "/cats/1" for ::1 at 2020-05-25 13:12:29 +0300
+Processing by CatsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCat Load (0.5ms)[0m  [1m[34mSELECT "cats".* FROM "cats" WHERE "cats"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/cats_controller.rb:14:in `show'
+  Rendering cats/show.html.erb within layouts/application
+  Rendered cats/show.html.erb within layouts/application (Duration: 362.6ms | Allocations: 147403)
+Completed 500 Internal Server Error in 369ms (ActiveRecord: 0.5ms | Allocations: 148529)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `cat' for #<#<Class:0x00005603ec1383c8>:0x00007fcc9484f798>
+Did you mean?  @cat):
+    18:     <th>Name</th>
+    19:      <th>Type</th>
+    20:      <th>Id</th>
+    21:      <th><%=link_to "Add New Toy",cat.toys_path(cat)%></th>
+    22:     </tr>
+    23:     <%=@cat.toys.each do |toy|%>
+    24:     <tr>
+  
+app/views/cats/show.html.erb:21
+Started GET "/cats/1" for ::1 at 2020-05-25 13:12:40 +0300
+Processing by CatsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCat Load (0.6ms)[0m  [1m[34mSELECT "cats".* FROM "cats" WHERE "cats"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/cats_controller.rb:14:in `show'
+  Rendering cats/show.html.erb within layouts/application
+  Rendered cats/show.html.erb within layouts/application (Duration: 386.2ms | Allocations: 147627)
+Completed 500 Internal Server Error in 395ms (ActiveRecord: 0.6ms | Allocations: 149504)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `cat' for #<#<Class:0x00007fcc94585b48>:0x00007fcc9459a570>
+Did you mean?  @cat):
+    18:     <th>Name</th>
+    19:      <th>Type</th>
+    20:      <th>Id</th>
+    21:      <th><%=link_to "Add New Toy",cat.toys_path(cat)%></th>
+    22:     </tr>
+    23:     <%=@cat.toys.each do |toy|%>
+    24:     <tr>
+  
+app/views/cats/show.html.erb:21
+Started GET "/cats/1" for ::1 at 2020-05-25 13:13:03 +0300
+Processing by CatsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCat Load (0.4ms)[0m  [1m[34mSELECT "cats".* FROM "cats" WHERE "cats"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/cats_controller.rb:14:in `show'
+  Rendering cats/show.html.erb within layouts/application
+  Rendered cats/show.html.erb within layouts/application (Duration: 366.2ms | Allocations: 147622)
+Completed 500 Internal Server Error in 375ms (ActiveRecord: 0.4ms | Allocations: 149482)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `cat' for #<#<Class:0x00005603ecd28f20>:0x00005603ecd2ec90>
+Did you mean?  @cat):
+    10: <td><%=
+    11: @cat.color%></td>
+    12: <td><%=@cat.id%></td>
+    13: <td><%=link_to "Add New Toy",cat.toys_path(cat)%></td>
+    14: </tr>
+    15: </table>
+    16: <h2>All Toys</h2>
+  
+app/views/cats/show.html.erb:13
+Started GET "/cats/1" for ::1 at 2020-05-25 13:13:25 +0300
+Processing by CatsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCat Load (0.4ms)[0m  [1m[34mSELECT "cats".* FROM "cats" WHERE "cats"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/cats_controller.rb:14:in `show'
+  Rendering cats/show.html.erb within layouts/application
+  Rendered cats/show.html.erb within layouts/application (Duration: 11.1ms | Allocations: 2622)
+Completed 500 Internal Server Error in 16ms (ActiveRecord: 0.4ms | Allocations: 4481)
+
+
+  
+ActionView::Template::Error (undefined method `toys_path' for #<Cat:0x00005603ed0b35a0>):
+    10: <td><%=
+    11: @cat.color%></td>
+    12: <td><%=@cat.id%></td>
+    13: <td><%=link_to "Add New Toy",@cat.toys_path(@cat)%></td>
+    14: </tr>
+    15: </table>
+    16: <h2>All Toys</h2>
+  
+app/views/cats/show.html.erb:13
+Started GET "/cats/1" for ::1 at 2020-05-25 13:13:34 +0300
+Processing by CatsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCat Load (0.3ms)[0m  [1m[34mSELECT "cats".* FROM "cats" WHERE "cats"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/cats_controller.rb:14:in `show'
+  Rendering cats/show.html.erb within layouts/application
+  Rendered cats/show.html.erb within layouts/application (Duration: 2.0ms | Allocations: 1159)
+Completed 500 Internal Server Error in 17ms (ActiveRecord: 0.3ms | Allocations: 3036)
+
+
+  
+ActionView::Template::Error (wrong number of arguments (given 1, expected 0)):
+    10: <td><%=
+    11: @cat.color%></td>
+    12: <td><%=@cat.id%></td>
+    13: <td><%=link_to "Add New Toy",@cat.toys(@cat)%></td>
+    14: </tr>
+    15: </table>
+    16: <h2>All Toys</h2>
+  
+app/views/cats/show.html.erb:13
+Started GET "/cats/1" for ::1 at 2020-05-25 13:13:51 +0300
+Processing by CatsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCat Load (0.3ms)[0m  [1m[34mSELECT "cats".* FROM "cats" WHERE "cats"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/cats_controller.rb:14:in `show'
+  Rendering cats/show.html.erb within layouts/application
+  [1m[36mToy Load (0.3ms)[0m  [1m[34mSELECT "toys".* FROM "toys" WHERE "toys"."cat_id" = $1 LIMIT $2[0m  [["cat_id", 1], ["LIMIT", 11]]
+  Rendered cats/show.html.erb within layouts/application (Duration: 13.5ms | Allocations: 4283)
+Completed 500 Internal Server Error in 20ms (ActiveRecord: 0.6ms | Allocations: 6141)
+
+
+  
+ActionView::Template::Error (undefined method `to_model' for #<ActiveRecord::Associations::CollectionProxy []>
+Did you mean?  to_xml):
+    10: <td><%=
+    11: @cat.color%></td>
+    12: <td><%=@cat.id%></td>
+    13: <td><%=link_to "Add New Toy",@cat.toys%></td>
+    14: </tr>
+    15: </table>
+    16: <h2>All Toys</h2>
+  
+app/views/cats/show.html.erb:13
+Started GET "/cats/1" for ::1 at 2020-05-25 13:14:04 +0300
+Processing by CatsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCat Load (0.3ms)[0m  [1m[34mSELECT "cats".* FROM "cats" WHERE "cats"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/cats_controller.rb:14:in `show'
+  Rendering cats/show.html.erb within layouts/application
+  [1m[36mToy Load (0.7ms)[0m  [1m[34mSELECT "toys".* FROM "toys" WHERE "toys"."cat_id" = $1[0m  [["cat_id", 1]]
+  ↳ app/views/cats/show.html.erb:24
+  Rendered cats/show.html.erb within layouts/application (Duration: 6.0ms | Allocations: 1249)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 24ms (Views: 18.1ms | ActiveRecord: 1.0ms | Allocations: 6749)
+
+
+Started GET "/cats/1" for ::1 at 2020-05-25 13:14:06 +0300
+Processing by CatsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCat Load (0.4ms)[0m  [1m[34mSELECT "cats".* FROM "cats" WHERE "cats"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/cats_controller.rb:14:in `show'
+  Rendering cats/show.html.erb within layouts/application
+  [1m[36mToy Load (0.6ms)[0m  [1m[34mSELECT "toys".* FROM "toys" WHERE "toys"."cat_id" = $1[0m  [["cat_id", 1]]
+  ↳ app/views/cats/show.html.erb:24
+  Rendered cats/show.html.erb within layouts/application (Duration: 4.3ms | Allocations: 917)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 20ms (Views: 15.2ms | ActiveRecord: 1.0ms | Allocations: 5512)
+
+
+Started GET "/cats/1" for ::1 at 2020-05-25 13:14:07 +0300
+Processing by CatsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCat Load (0.4ms)[0m  [1m[34mSELECT "cats".* FROM "cats" WHERE "cats"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/cats_controller.rb:14:in `show'
+  Rendering cats/show.html.erb within layouts/application
+  [1m[36mToy Load (0.5ms)[0m  [1m[34mSELECT "toys".* FROM "toys" WHERE "toys"."cat_id" = $1[0m  [["cat_id", 1]]
+  ↳ app/views/cats/show.html.erb:24
+  Rendered cats/show.html.erb within layouts/application (Duration: 4.6ms | Allocations: 907)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 36ms (Views: 31.2ms | ActiveRecord: 0.9ms | Allocations: 5510)
+
+
+Started GET "/cats/1" for ::1 at 2020-05-25 13:14:08 +0300
+Processing by CatsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCat Load (0.4ms)[0m  [1m[34mSELECT "cats".* FROM "cats" WHERE "cats"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/cats_controller.rb:14:in `show'
+  Rendering cats/show.html.erb within layouts/application
+  [1m[36mToy Load (0.5ms)[0m  [1m[34mSELECT "toys".* FROM "toys" WHERE "toys"."cat_id" = $1[0m  [["cat_id", 1]]
+  ↳ app/views/cats/show.html.erb:24
+  Rendered cats/show.html.erb within layouts/application (Duration: 4.3ms | Allocations: 907)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 23ms (Views: 17.3ms | ActiveRecord: 0.9ms | Allocations: 5501)
+
+
+Started GET "/cats/1" for ::1 at 2020-05-25 13:14:08 +0300
+Processing by CatsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCat Load (0.4ms)[0m  [1m[34mSELECT "cats".* FROM "cats" WHERE "cats"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/cats_controller.rb:14:in `show'
+  Rendering cats/show.html.erb within layouts/application
+  [1m[36mToy Load (3.3ms)[0m  [1m[34mSELECT "toys".* FROM "toys" WHERE "toys"."cat_id" = $1[0m  [["cat_id", 1]]
+  ↳ app/views/cats/show.html.erb:24
+  Rendered cats/show.html.erb within layouts/application (Duration: 6.6ms | Allocations: 906)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 20ms (Views: 12.7ms | ActiveRecord: 3.7ms | Allocations: 5502)
+
+
+Started GET "/cats/1" for ::1 at 2020-05-25 13:14:08 +0300
+Processing by CatsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCat Load (0.4ms)[0m  [1m[34mSELECT "cats".* FROM "cats" WHERE "cats"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/cats_controller.rb:14:in `show'
+  Rendering cats/show.html.erb within layouts/application
+  [1m[36mToy Load (0.4ms)[0m  [1m[34mSELECT "toys".* FROM "toys" WHERE "toys"."cat_id" = $1[0m  [["cat_id", 1]]
+  ↳ app/views/cats/show.html.erb:24
+  Rendered cats/show.html.erb within layouts/application (Duration: 5.2ms | Allocations: 906)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 19ms (Views: 14.8ms | ActiveRecord: 0.8ms | Allocations: 5494)
+
+
+Started GET "/cats/1" for ::1 at 2020-05-25 13:14:08 +0300
+Processing by CatsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCat Load (1.5ms)[0m  [1m[34mSELECT "cats".* FROM "cats" WHERE "cats"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/cats_controller.rb:14:in `show'
+  Rendering cats/show.html.erb within layouts/application
+  [1m[36mToy Load (0.4ms)[0m  [1m[34mSELECT "toys".* FROM "toys" WHERE "toys"."cat_id" = $1[0m  [["cat_id", 1]]
+  ↳ app/views/cats/show.html.erb:24
+  Rendered cats/show.html.erb within layouts/application (Duration: 4.7ms | Allocations: 906)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 22ms (Views: 15.0ms | ActiveRecord: 1.8ms | Allocations: 5492)
+
+
+Started GET "/cats/1" for ::1 at 2020-05-25 13:14:09 +0300
+Processing by CatsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCat Load (1.3ms)[0m  [1m[34mSELECT "cats".* FROM "cats" WHERE "cats"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/cats_controller.rb:14:in `show'
+  Rendering cats/show.html.erb within layouts/application
+  [1m[36mToy Load (0.4ms)[0m  [1m[34mSELECT "toys".* FROM "toys" WHERE "toys"."cat_id" = $1[0m  [["cat_id", 1]]
+  ↳ app/views/cats/show.html.erb:24
+  Rendered cats/show.html.erb within layouts/application (Duration: 3.9ms | Allocations: 906)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 19ms (Views: 12.3ms | ActiveRecord: 1.6ms | Allocations: 5500)
+
+
+Started GET "/cats/1" for ::1 at 2020-05-25 13:14:09 +0300
+Processing by CatsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCat Load (0.3ms)[0m  [1m[34mSELECT "cats".* FROM "cats" WHERE "cats"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/cats_controller.rb:14:in `show'
+  Rendering cats/show.html.erb within layouts/application
+  [1m[36mToy Load (1.6ms)[0m  [1m[34mSELECT "toys".* FROM "toys" WHERE "toys"."cat_id" = $1[0m  [["cat_id", 1]]
+  ↳ app/views/cats/show.html.erb:24
+  Rendered cats/show.html.erb within layouts/application (Duration: 5.7ms | Allocations: 906)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 22ms (Views: 17.0ms | ActiveRecord: 1.9ms | Allocations: 5488)
+
+
+Started GET "/cats/1" for ::1 at 2020-05-25 13:14:09 +0300
+Processing by CatsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCat Load (1.1ms)[0m  [1m[34mSELECT "cats".* FROM "cats" WHERE "cats"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/cats_controller.rb:14:in `show'
+  Rendering cats/show.html.erb within layouts/application
+  [1m[36mToy Load (0.3ms)[0m  [1m[34mSELECT "toys".* FROM "toys" WHERE "toys"."cat_id" = $1[0m  [["cat_id", 1]]
+  ↳ app/views/cats/show.html.erb:24
+  Rendered cats/show.html.erb within layouts/application (Duration: 4.8ms | Allocations: 906)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 29ms (Views: 23.8ms | ActiveRecord: 1.4ms | Allocations: 5494)
+
+
+Started GET "/cats/1" for ::1 at 2020-05-25 13:14:24 +0300
+Processing by CatsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCat Load (0.3ms)[0m  [1m[34mSELECT "cats".* FROM "cats" WHERE "cats"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/cats_controller.rb:14:in `show'
+  Rendering cats/show.html.erb within layouts/application
+  [1m[36mToy Load (1.4ms)[0m  [1m[34mSELECT "toys".* FROM "toys" WHERE "toys"."cat_id" = $1 LIMIT $2[0m  [["cat_id", 1], ["LIMIT", 11]]
+  Rendered cats/show.html.erb within layouts/application (Duration: 13.4ms | Allocations: 4267)
+Completed 500 Internal Server Error in 19ms (ActiveRecord: 1.7ms | Allocations: 6142)
+
+
+  
+ActionView::Template::Error (undefined method `to_model' for #<ActiveRecord::Associations::CollectionProxy []>
+Did you mean?  to_xml):
+    10: <td><%=
+    11: @cat.color%></td>
+    12: <td><%=@cat.id%></td>
+    13: <td><%=link_to "Add New Toy",@cat.toys%></td>
+    14: </tr>
+    15: </table>
+    16: <h2>All Toys</h2>
+  
+app/views/cats/show.html.erb:13
+Started GET "/cats/1" for ::1 at 2020-05-25 13:15:44 +0300
+Processing by CatsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCat Load (0.3ms)[0m  [1m[34mSELECT "cats".* FROM "cats" WHERE "cats"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/cats_controller.rb:14:in `show'
+  Rendering cats/show.html.erb within layouts/application
+  [1m[36mToy Load (0.3ms)[0m  [1m[34mSELECT "toys".* FROM "toys" WHERE "toys"."cat_id" = $1[0m  [["cat_id", 1]]
+  ↳ app/views/cats/show.html.erb:24
+  Rendered cats/show.html.erb within layouts/application (Duration: 15.5ms | Allocations: 3488)
+Completed 500 Internal Server Error in 21ms (ActiveRecord: 0.6ms | Allocations: 5362)
+
+
+  
+ActionView::Template::Error (undefined method `toys_path' for #<Cat:0x00005603ecd3b9e0>):
+    33: 
+    34: </table>
+    35: <%=link_to   "Go Back",:action=>:index %>
+    36: <%=link_to "Add New Toy",@cat.toys_path%>
+  
+app/views/cats/show.html.erb:36
+Started GET "/cats/1" for ::1 at 2020-05-25 13:16:55 +0300
+Processing by CatsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCat Load (0.2ms)[0m  [1m[34mSELECT "cats".* FROM "cats" WHERE "cats"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/cats_controller.rb:14:in `show'
+  Rendering cats/show.html.erb within layouts/application
+  [1m[36mToy Load (0.2ms)[0m  [1m[34mSELECT "toys".* FROM "toys" WHERE "toys"."cat_id" = $1[0m  [["cat_id", 1]]
+  ↳ app/views/cats/show.html.erb:24
+  Rendered cats/show.html.erb within layouts/application (Duration: 2.8ms | Allocations: 1140)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 17ms (Views: 13.3ms | ActiveRecord: 0.5ms | Allocations: 6655)
+
+
+Started GET "/cats" for ::1 at 2020-05-25 13:16:58 +0300
+Processing by CatsController#index as HTML
+  Rendering cats/index.html.erb within layouts/application
+  Rendered cats/_header.html.erb (Duration: 0.6ms | Allocations: 89)
+  [1m[36mCat Load (0.5ms)[0m  [1m[34mSELECT "cats".* FROM "cats"[0m
+  ↳ app/views/cats/index.html.erb:16
+  Rendered cats/_footer.html.erb (Duration: 0.6ms | Allocations: 81)
+  Rendered cats/index.html.erb within layouts/application (Duration: 8.5ms | Allocations: 1933)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 21ms (Views: 18.4ms | ActiveRecord: 0.5ms | Allocations: 6097)
+
+
+Started GET "/cats/1" for ::1 at 2020-05-25 13:16:59 +0300
+Processing by CatsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCat Load (0.3ms)[0m  [1m[34mSELECT "cats".* FROM "cats" WHERE "cats"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/cats_controller.rb:14:in `show'
+  Rendering cats/show.html.erb within layouts/application
+  [1m[36mToy Load (0.4ms)[0m  [1m[34mSELECT "toys".* FROM "toys" WHERE "toys"."cat_id" = $1[0m  [["cat_id", 1]]
+  ↳ app/views/cats/show.html.erb:24
+  Rendered cats/show.html.erb within layouts/application (Duration: 4.1ms | Allocations: 884)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 32ms (Views: 23.5ms | ActiveRecord: 0.7ms | Allocations: 5488)
+
+
+Started GET "/cats/1/toys" for ::1 at 2020-05-25 13:17:03 +0300
+Processing by ToysController#index as HTML
+  Parameters: {"cat_id"=>"1"}
+  [1m[36mCat Load (0.9ms)[0m  [1m[34mSELECT "cats".* FROM "cats" WHERE "cats"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/toys_controller.rb:3:in `index'
+  Rendering toys/index.html.erb within layouts/application
+  [1m[36mToy Load (0.4ms)[0m  [1m[34mSELECT "toys".* FROM "toys" WHERE "toys"."cat_id" = $1[0m  [["cat_id", 1]]
+  ↳ app/views/toys/index.html.erb:10
+  Rendered toys/index.html.erb within layouts/application (Duration: 4.4ms | Allocations: 935)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 26ms (Views: 18.5ms | ActiveRecord: 1.4ms | Allocations: 6080)
+
+
+Started GET "/cats/1" for ::1 at 2020-05-25 13:20:25 +0300
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by CatsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCat Load (0.6ms)[0m  [1m[34mSELECT "cats".* FROM "cats" WHERE "cats"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/cats_controller.rb:14:in `show'
+  Rendering cats/show.html.erb within layouts/application
+  [1m[36mToy Load (1.5ms)[0m  [1m[34mSELECT "toys".* FROM "toys" WHERE "toys"."cat_id" = $1[0m  [["cat_id", 1]]
+  ↳ app/views/cats/show.html.erb:24
+  Rendered cats/show.html.erb within layouts/application (Duration: 18.2ms | Allocations: 5166)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 79ms (Views: 38.0ms | ActiveRecord: 9.4ms | Allocations: 19106)
+
+
+Started GET "/cats/1" for ::1 at 2020-05-25 13:20:26 +0300
+Processing by CatsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCat Load (0.3ms)[0m  [1m[34mSELECT "cats".* FROM "cats" WHERE "cats"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/cats_controller.rb:14:in `show'
+  Rendering cats/show.html.erb within layouts/application
+  [1m[36mToy Load (0.4ms)[0m  [1m[34mSELECT "toys".* FROM "toys" WHERE "toys"."cat_id" = $1[0m  [["cat_id", 1]]
+  ↳ app/views/cats/show.html.erb:24
+  Rendered cats/show.html.erb within layouts/application (Duration: 4.2ms | Allocations: 927)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 17ms (Views: 13.5ms | ActiveRecord: 0.7ms | Allocations: 5527)
+
+
+Started GET "/cats/1/toys/new" for ::1 at 2020-05-25 13:20:27 +0300
+Processing by ToysController#new as HTML
+  Parameters: {"cat_id"=>"1"}
+  [1m[36mCat Load (1.6ms)[0m  [1m[34mSELECT "cats".* FROM "cats" WHERE "cats"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/toys_controller.rb:7:in `new'
+  Rendering toys/new.html.erb within layouts/application
+  Rendered toys/_form.html.erb (Duration: 14.2ms | Allocations: 3911)
+  Rendered toys/new.html.erb within layouts/application (Duration: 16.1ms | Allocations: 4210)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 51ms (Views: 28.3ms | ActiveRecord: 4.1ms | Allocations: 12880)
+
+
+Started GET "/cats/1/toys/new" for ::1 at 2020-05-25 13:20:58 +0300
+Processing by ToysController#new as HTML
+  Parameters: {"cat_id"=>"1"}
+  [1m[36mCat Load (1.1ms)[0m  [1m[34mSELECT "cats".* FROM "cats" WHERE "cats"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/toys_controller.rb:7:in `new'
+  Rendering toys/new.html.erb within layouts/application
+  Rendered toys/_form.html.erb (Duration: 8.8ms | Allocations: 917)
+  Rendered toys/new.html.erb within layouts/application (Duration: 9.4ms | Allocations: 987)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 32ms (Views: 24.9ms | ActiveRecord: 1.1ms | Allocations: 5595)
+
+
+Started POST "/cats/1/toys" for ::1 at 2020-05-25 13:21:10 +0300
+Processing by ToysController#create as HTML
+  Parameters: {"authenticity_token"=>"EBG6nb3htYj1Bj9gUSkMT2RwmapHxB+TFLrZ2Hy883ntsqLSpj4u6OZ0zxy1l0MF8tucX6m/2a0439CxGvs5Rg==", "toy"=>{"name"=>"ayıcık", "ttype"=>"kumaş oyuncak"}, "commit"=>"Create Toy", "cat_id"=>"1"}
+  [1m[36mCat Load (1.0ms)[0m  [1m[34mSELECT "cats".* FROM "cats" WHERE "cats"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/toys_controller.rb:22:in `create'
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/toys_controller.rb:23:in `create'
+  [1m[36mToy Create (2.2ms)[0m  [1m[32mINSERT INTO "toys" ("name", "ttype", "cat_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "ayıcık"], ["ttype", "kumaş oyuncak"], ["cat_id", 1], ["created_at", "2020-05-25 10:21:10.817027"], ["updated_at", "2020-05-25 10:21:10.817027"]]
+  ↳ app/controllers/toys_controller.rb:23:in `create'
+  [1m[35m (3.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/toys_controller.rb:23:in `create'
+Redirected to http://localhost:3000/cats/1
+Completed 302 Found in 22ms (ActiveRecord: 6.9ms | Allocations: 4399)
+
+
+Started GET "/cats/1" for ::1 at 2020-05-25 13:21:10 +0300
+Processing by CatsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCat Load (0.4ms)[0m  [1m[34mSELECT "cats".* FROM "cats" WHERE "cats"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/cats_controller.rb:14:in `show'
+  Rendering cats/show.html.erb within layouts/application
+  [1m[36mToy Load (0.5ms)[0m  [1m[34mSELECT "toys".* FROM "toys" WHERE "toys"."cat_id" = $1[0m  [["cat_id", 1]]
+  ↳ app/views/cats/show.html.erb:24
+  Rendered cats/show.html.erb within layouts/application (Duration: 5.5ms | Allocations: 1011)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 60ms (Views: 51.6ms | ActiveRecord: 1.0ms | Allocations: 5617)
+
+
+Started GET "/cats/1" for ::1 at 2020-05-25 13:21:24 +0300
+Processing by CatsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCat Load (0.3ms)[0m  [1m[34mSELECT "cats".* FROM "cats" WHERE "cats"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/cats_controller.rb:14:in `show'
+  Rendering cats/show.html.erb within layouts/application
+  [1m[36mToy Load (0.8ms)[0m  [1m[34mSELECT "toys".* FROM "toys" WHERE "toys"."cat_id" = $1[0m  [["cat_id", 1]]
+  ↳ app/views/cats/show.html.erb:24
+  Rendered cats/show.html.erb within layouts/application (Duration: 5.0ms | Allocations: 1231)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 21ms (Views: 15.4ms | ActiveRecord: 1.1ms | Allocations: 6757)
+
+
+Started GET "/cats/1" for ::1 at 2020-05-25 13:26:38 +0300
+Processing by CatsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCat Load (0.7ms)[0m  [1m[34mSELECT "cats".* FROM "cats" WHERE "cats"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/cats_controller.rb:14:in `show'
+  Rendering cats/show.html.erb within layouts/application
+  [1m[36mToy Load (0.3ms)[0m  [1m[34mSELECT "toys".* FROM "toys" WHERE "toys"."cat_id" = $1[0m  [["cat_id", 1]]
+  ↳ app/views/cats/show.html.erb:24
+  Rendered cats/show.html.erb within layouts/application (Duration: 2.6ms | Allocations: 951)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 14ms (Views: 9.5ms | ActiveRecord: 1.3ms | Allocations: 5636)
+
+

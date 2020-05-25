@@ -10,6 +10,7 @@
 <td><%=
 @cat.color%></td>
 <td><%=@cat.id%></td>
+
 </tr>
 </table>
 <h2>All Toys</h2>
@@ -18,8 +19,9 @@
     <th>Name</th>
      <th>Type</th>
      <th>Id</th>
+     
     </tr>
-    <%=@cat.toys.each do |toy|%>
+    <%@cat.toys.each do |toy|%>
     <tr>
 <td><%=toy.name%></td>
 <td><%=toy.ttype%></td>
@@ -31,5 +33,6 @@
 
 </table>
 <%=link_to   "Go Back",:action=>:index %>
+<%= link_to "Add New Toy",new_cat_toy_url(@cat) %>
 
 
