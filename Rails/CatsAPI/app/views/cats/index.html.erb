@@ -1,38 +1,46 @@
 
-<div class="table">
-<h1>Listing All Cats</h1>
-<table>
-<tr>
-<th>Id </th>
-<th>Name </th>
-<th>Color </th>
-<th>Action1</th>
-<th>Action2</th>
-<th>Action3</th>
 
-</tr>
+
+<div class="container">
+<h1>Listing All Cats</h1>
+  <div class="row">
+    <div class="col table-head">
+      Id
+    </div>
+    <div class="col table-head">
+     Name
+    </div>
+    <div class="col table-head">
+     Column
+    </div>
+    <div class="col table-head">
+    Action1
+    </div>
+    <div class="col table-head">
+    Action2
+    </div>
+    <div class="col table-head">
+    Action3
+    </div>
+  </div>
+
 
 
 <% @cats.each do |cat| %>
-<tr>
-<td> <%= cat.id    %></td>
-<td> <%= cat.name  %></td>
-<td> <%= cat.color %></td>
-<td><%=link_to "show",cat_path(cat)%></td>
-<td><%=link_to "edit",edit_cat_path(cat)%></td>
-
-<td><%=link_to "delete",cat_path(cat)%></td>
-
-
-<%link_to "toys" %>
-
-</td>
-
-</tr>
-<% end %>
-</table>
-<%=link_to "Add New Cats",:action => :new%>
+<div class="row">
+  <div class="col"><%= cat.id%></div>
+  <div class="col"><%= cat.name%></div>
+  <div class="col"><%= cat.color %> </div>
+  <div class="col"><%=link_to "show",cat_path(cat)%> </div>
+  <div class="col"><%=link_to "edit",edit_cat_path(cat)%></div>
+  <div class="col"><%=link_to "delete",cat_path(cat)%></div>
 </div>
+<% end %>
+
+</div>
+
+<%=link_to "Add New Cats",:action => :new%>
+
 
 
 
