@@ -14,14 +14,14 @@ Cat API is a basic rails app that helped me to build my skills .
   <img src="./app/assets/images/4.png"  width="650">
 </p>
 <p align="center">
-  <img src="./app/assets/images/1.png"  width="650">
+  <img src="./app/assets/images/5.png"  width="650">
 </p>
 
 ## Usage
 
 <details><summary><b>Show instructions</b></summary>
 
-1. Install the preset:
+1. Install the the app:
 
    ```sh
    $ bundle install
@@ -31,6 +31,7 @@ Cat API is a basic rails app that helped me to build my skills .
 
    ```sh
    $ bundle exec rails s
+   go to localhost of your machine
    ```
 
 </details>

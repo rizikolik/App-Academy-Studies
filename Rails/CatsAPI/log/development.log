@@ -27639,3 +27639,29 @@ Processing by CatsController#index as HTML
 Completed 200 OK in 56ms (Views: 54.3ms | ActiveRecord: 0.7ms | Allocations: 11420)
 
 
+Started GET "/cats/14" for ::1 at 2020-05-25 23:28:56 +0300
+Processing by CatsController#show as HTML
+  Parameters: {"id"=>"14"}
+  [1m[36mCat Load (1.2ms)[0m  [1m[34mSELECT "cats".* FROM "cats" WHERE "cats"."id" = $1 LIMIT $2[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/cats_controller.rb:14:in `show'
+  Rendering cats/show.html.erb within layouts/application
+  [1m[36mToy Load (0.9ms)[0m  [1m[34mSELECT "toys".* FROM "toys" WHERE "toys"."cat_id" = $1[0m  [["cat_id", 14]]
+  ↳ app/views/cats/show.html.erb:24
+  Rendered cats/show.html.erb within layouts/application (Duration: 6.2ms | Allocations: 1065)
+Started GET "/cats/14" for ::1 at 2020-05-25 23:28:58 +0300
+Processing by CatsController#show as HTML
+  Parameters: {"id"=>"14"}
+  [1m[36mCat Load (0.7ms)[0m  [1m[34mSELECT "cats".* FROM "cats" WHERE "cats"."id" = $1 LIMIT $2[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/cats_controller.rb:14:in `show'
+  Rendering cats/show.html.erb within layouts/application
+  [1m[36mToy Load (0.5ms)[0m  [1m[34mSELECT "toys".* FROM "toys" WHERE "toys"."cat_id" = $1[0m  [["cat_id", 14]]
+  ↳ app/views/cats/show.html.erb:24
+  Rendered cats/show.html.erb within layouts/application (Duration: 14.8ms | Allocations: 3666)
+  Rendered layouts/_header.html.erb (Duration: 0.0ms | Allocations: 6)
+Completed 200 OK in 2409ms (Views: 2399.6ms | ActiveRecord: 2.3ms | Allocations: 311586)
+
+
+  Rendered layouts/_header.html.erb (Duration: 0.1ms | Allocations: 6)
+Completed 200 OK in 469ms (Views: 462.4ms | ActiveRecord: 1.4ms | Allocations: 159029)
+
+
