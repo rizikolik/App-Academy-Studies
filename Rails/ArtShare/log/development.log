@@ -1,2 +1,0 @@
-  [1m[35m (3.2ms)[0m  [1m[35mCREATE DATABASE "ArtShare_development" ENCODING = 'unicode'[0m
-  [1m[35m (0.5ms)[0m  [1m[35mCREATE DATABASE "ArtShare_test" ENCODING = 'unicode'[0m
