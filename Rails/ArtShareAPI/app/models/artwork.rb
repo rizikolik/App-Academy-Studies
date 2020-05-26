@@ -8,7 +8,7 @@ class Artwork <ApplicationRecord
   validates :title, uniqueness: { scope: :artist }
 
     def shared_viewers
-      self.shared_viewers
+      Artwork.shared_viewers
 
     end
 end
