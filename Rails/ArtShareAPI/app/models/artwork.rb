@@ -1,6 +1,7 @@
 class Artwork <ApplicationRecord
     belongs_to :artist
     has_many :artwork_shares
+    has_many :comments, foreign_key:"artwork_id",dependent: :destroy
     has_many :shared_viewers,
     through: :artwork_shares,
     source: :viewer
