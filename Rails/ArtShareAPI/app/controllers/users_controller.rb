@@ -1,6 +1,12 @@
 class UsersController < ApplicationController
     def index
-        @users=User.all 
+        if params[:query]
+            @users = User.where('username LIKE ?', "%#{params[:query]}%")
+        else
+
+            @users=User.all 
+        end
+        render @users
     end
     def show
         @user=User.find(params[:id])
