@@ -1,0 +1,33 @@
+<form>
+  <label for="cat_name">Name</label><br/>
+  <input
+    type="text"
+    name="cat[name]"
+    id="cat_name"
+> <br/>
+
+<p>Please select gender :</p>
+<input type="radio" id="M" name="gender" value="M">
+  <label for="male">Male</label><br>
+  <input type="radio" id="F" name="gender" value="F">
+  <label for="female">Female</label><br>
+  <input type="radio" id="O" name="gender" value="O">
+  <label for="other">Other</label><br><br>
+  <p>Please select the color</p>
+  <select id="color" name="color">
+  <option  >----</option>
+  <option value="volvo">RED</option>
+  <option value="saab">GREEEN</option>
+  <option value="fiat">YELLOW</option>
+  <option value="audi">BLACK</option>
+</select>
+<p>Please enter the birth date of the Cat :</p>
+<input type="date" name="cat[date]" />
+<p> Please write some description:</p>
+<textarea  name="cat[description]"  rows="4" cols="50"></textarea><br/>
+<input type="submit" value="Send ">
+
+
+
+
+</form>
