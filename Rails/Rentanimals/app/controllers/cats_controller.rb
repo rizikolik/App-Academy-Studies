@@ -6,7 +6,7 @@ class CatsController < ApplicationController
         render "new"
     end
     def edit
-       # @cat=Cat.find(params[:id])
+       @cat=Cat.find(params[:id])
         render "edit"
     end
     def update
