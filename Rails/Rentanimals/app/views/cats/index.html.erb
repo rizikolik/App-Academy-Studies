@@ -1,3 +1,11 @@
+
+<nav class="index-header">
+    <h1>ALL OF THE CATS IN THE WORLD</h1>
+    <a href="/cats/new">
+      Add Cat
+      <i class="fa fa-plus" aria-hidden="true"></i>
+    </a>
+  </nav>
 <div class="default-cont">
 <% @all.each do |cat|%>
 <%= render 'card', cat:cat %>

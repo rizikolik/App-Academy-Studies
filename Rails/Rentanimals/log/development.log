@@ -1481,3 +1481,405 @@ Processing by CatsController#index as HTML
 Completed 200 OK in 29ms (Views: 26.2ms | ActiveRecord: 0.4ms | Allocations: 6468)
 
 
+Started GET "/cats" for ::1 at 2020-06-23 23:39:46 +0300
+Processing by CatsController#index as HTML
+  Rendering cats/index.html.erb within layouts/application
+  [1m[36mCat Load (0.8ms)[0m  [1m[34mSELECT "cats".* FROM "cats"[0m
+  ↳ app/views/cats/index.html.erb:2
+  Rendered cats/_card.html.erb (Duration: 0.1ms | Allocations: 9)
+  Rendered cats/_card.html.erb (Duration: 0.1ms | Allocations: 8)
+  Rendered cats/_card.html.erb (Duration: 0.1ms | Allocations: 8)
+  Rendered cats/_card.html.erb (Duration: 0.1ms | Allocations: 8)
+  Rendered cats/_card.html.erb (Duration: 0.1ms | Allocations: 8)
+  Rendered cats/_card.html.erb (Duration: 0.2ms | Allocations: 8)
+  Rendered cats/index.html.erb within layouts/application (Duration: 6.1ms | Allocations: 1181)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 46ms (Views: 43.9ms | ActiveRecord: 0.8ms | Allocations: 12857)
+
+
+Started GET "/cats" for ::1 at 2020-06-23 23:39:47 +0300
+Processing by CatsController#index as HTML
+  Rendering cats/index.html.erb within layouts/application
+  [1m[36mCat Load (0.5ms)[0m  [1m[34mSELECT "cats".* FROM "cats"[0m
+  ↳ app/views/cats/index.html.erb:2
+  Rendered cats/_card.html.erb (Duration: 0.1ms | Allocations: 9)
+  Rendered cats/_card.html.erb (Duration: 0.1ms | Allocations: 8)
+  Rendered cats/_card.html.erb (Duration: 0.1ms | Allocations: 8)
+  Rendered cats/_card.html.erb (Duration: 0.1ms | Allocations: 8)
+  Rendered cats/_card.html.erb (Duration: 0.1ms | Allocations: 8)
+  Rendered cats/_card.html.erb (Duration: 0.1ms | Allocations: 8)
+  Rendered cats/index.html.erb within layouts/application (Duration: 4.4ms | Allocations: 1181)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 15ms (Views: 13.4ms | ActiveRecord: 0.5ms | Allocations: 5196)
+
+
+Started GET "/cats" for ::1 at 2020-06-23 23:40:03 +0300
+Processing by CatsController#index as HTML
+  Rendering cats/index.html.erb within layouts/application
+  [1m[36mCat Load (1.1ms)[0m  [1m[34mSELECT "cats".* FROM "cats"[0m
+  ↳ app/views/cats/index.html.erb:2
+  Rendered cats/_card.html.erb (Duration: 0.1ms | Allocations: 9)
+  Rendered cats/_card.html.erb (Duration: 0.1ms | Allocations: 8)
+  Rendered cats/_card.html.erb (Duration: 0.1ms | Allocations: 8)
+  Rendered cats/_card.html.erb (Duration: 0.1ms | Allocations: 8)
+  Rendered cats/_card.html.erb (Duration: 0.1ms | Allocations: 8)
+  Rendered cats/_card.html.erb (Duration: 0.1ms | Allocations: 8)
+  Rendered cats/index.html.erb within layouts/application (Duration: 7.3ms | Allocations: 1183)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 50ms (Views: 47.5ms | ActiveRecord: 1.1ms | Allocations: 12668)
+
+
+Started GET "/cats" for ::1 at 2020-06-23 23:40:21 +0300
+Processing by CatsController#index as HTML
+  Rendering cats/index.html.erb within layouts/application
+  [1m[36mCat Load (1.6ms)[0m  [1m[34mSELECT "cats".* FROM "cats"[0m
+  ↳ app/views/cats/index.html.erb:2
+  Rendered cats/_card.html.erb (Duration: 0.1ms | Allocations: 9)
+  Rendered cats/_card.html.erb (Duration: 0.1ms | Allocations: 8)
+  Rendered cats/_card.html.erb (Duration: 0.1ms | Allocations: 8)
+  Rendered cats/_card.html.erb (Duration: 0.1ms | Allocations: 8)
+  Rendered cats/_card.html.erb (Duration: 0.1ms | Allocations: 8)
+  Rendered cats/_card.html.erb (Duration: 0.1ms | Allocations: 8)
+  Rendered cats/index.html.erb within layouts/application (Duration: 7.0ms | Allocations: 1181)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 39ms (Views: 35.9ms | ActiveRecord: 1.6ms | Allocations: 12668)
+
+
+Started GET "/cats" for ::1 at 2020-06-23 23:41:11 +0300
+Processing by CatsController#index as HTML
+  Rendering cats/index.html.erb within layouts/application
+  [1m[36mCat Load (0.6ms)[0m  [1m[34mSELECT "cats".* FROM "cats"[0m
+  ↳ app/views/cats/index.html.erb:2
+  Rendered cats/_card.html.erb (Duration: 0.1ms | Allocations: 9)
+  Rendered cats/_card.html.erb (Duration: 0.1ms | Allocations: 8)
+  Rendered cats/_card.html.erb (Duration: 0.1ms | Allocations: 8)
+  Rendered cats/_card.html.erb (Duration: 0.1ms | Allocations: 8)
+  Rendered cats/_card.html.erb (Duration: 0.1ms | Allocations: 8)
+  Rendered cats/_card.html.erb (Duration: 0.1ms | Allocations: 8)
+  Rendered cats/index.html.erb within layouts/application (Duration: 5.2ms | Allocations: 1189)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 67ms (Views: 65.8ms | ActiveRecord: 0.6ms | Allocations: 12682)
+
+
+Started GET "/cats" for ::1 at 2020-06-23 23:41:13 +0300
+Processing by CatsController#index as HTML
+  Rendering cats/index.html.erb within layouts/application
+  [1m[36mCat Load (0.5ms)[0m  [1m[34mSELECT "cats".* FROM "cats"[0m
+  ↳ app/views/cats/index.html.erb:2
+  Rendered cats/_card.html.erb (Duration: 0.1ms | Allocations: 9)
+  Rendered cats/_card.html.erb (Duration: 0.2ms | Allocations: 8)
+  Rendered cats/_card.html.erb (Duration: 0.1ms | Allocations: 8)
+  Rendered cats/_card.html.erb (Duration: 0.1ms | Allocations: 8)
+  Rendered cats/_card.html.erb (Duration: 0.1ms | Allocations: 8)
+  Rendered cats/_card.html.erb (Duration: 0.3ms | Allocations: 8)
+  Rendered cats/index.html.erb within layouts/application (Duration: 9.2ms | Allocations: 1183)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 27ms (Views: 24.8ms | ActiveRecord: 0.5ms | Allocations: 5198)
+
+
+Started GET "/cats" for ::1 at 2020-06-23 23:41:21 +0300
+Processing by CatsController#index as HTML
+  Rendering cats/index.html.erb within layouts/application
+  [1m[36mCat Load (0.7ms)[0m  [1m[34mSELECT "cats".* FROM "cats"[0m
+  ↳ app/views/cats/index.html.erb:2
+  Rendered cats/_card.html.erb (Duration: 0.1ms | Allocations: 9)
+  Rendered cats/_card.html.erb (Duration: 0.1ms | Allocations: 8)
+  Rendered cats/_card.html.erb (Duration: 0.1ms | Allocations: 8)
+  Rendered cats/_card.html.erb (Duration: 0.1ms | Allocations: 8)
+  Rendered cats/_card.html.erb (Duration: 0.1ms | Allocations: 8)
+  Rendered cats/_card.html.erb (Duration: 0.1ms | Allocations: 8)
+  Rendered cats/index.html.erb within layouts/application (Duration: 13.2ms | Allocations: 1181)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 78ms (Views: 74.2ms | ActiveRecord: 0.7ms | Allocations: 12679)
+
+
+Started GET "/cats" for ::1 at 2020-06-23 23:41:59 +0300
+Processing by CatsController#index as HTML
+  Rendering cats/index.html.erb within layouts/application
+  [1m[36mCat Load (0.5ms)[0m  [1m[34mSELECT "cats".* FROM "cats"[0m
+  ↳ app/views/cats/index.html.erb:2
+  Rendered cats/_card.html.erb (Duration: 0.1ms | Allocations: 9)
+  Rendered cats/_card.html.erb (Duration: 0.1ms | Allocations: 8)
+  Rendered cats/_card.html.erb (Duration: 0.1ms | Allocations: 8)
+  Rendered cats/_card.html.erb (Duration: 0.1ms | Allocations: 8)
+  Rendered cats/_card.html.erb (Duration: 0.1ms | Allocations: 8)
+  Rendered cats/_card.html.erb (Duration: 0.1ms | Allocations: 8)
+  Rendered cats/index.html.erb within layouts/application (Duration: 4.2ms | Allocations: 1181)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 43ms (Views: 41.7ms | ActiveRecord: 0.5ms | Allocations: 12673)
+
+
+Started GET "/cats" for ::1 at 2020-06-23 23:42:51 +0300
+Processing by CatsController#index as HTML
+  Rendering cats/index.html.erb within layouts/application
+  [1m[36mCat Load (0.6ms)[0m  [1m[34mSELECT "cats".* FROM "cats"[0m
+  ↳ app/views/cats/index.html.erb:2
+  Rendered cats/_card.html.erb (Duration: 0.1ms | Allocations: 9)
+  Rendered cats/_card.html.erb (Duration: 0.1ms | Allocations: 8)
+  Rendered cats/_card.html.erb (Duration: 0.1ms | Allocations: 8)
+  Rendered cats/_card.html.erb (Duration: 0.1ms | Allocations: 8)
+  Rendered cats/_card.html.erb (Duration: 0.1ms | Allocations: 8)
+  Rendered cats/_card.html.erb (Duration: 0.1ms | Allocations: 8)
+  Rendered cats/index.html.erb within layouts/application (Duration: 4.7ms | Allocations: 1181)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 47ms (Views: 45.7ms | ActiveRecord: 0.6ms | Allocations: 13060)
+
+
+Started GET "/cats" for ::1 at 2020-06-23 23:44:06 +0300
+Processing by CatsController#index as HTML
+  Rendering cats/index.html.erb within layouts/application
+  [1m[36mCat Load (0.5ms)[0m  [1m[34mSELECT "cats".* FROM "cats"[0m
+  ↳ app/views/cats/index.html.erb:3
+  Rendered cats/_card.html.erb (Duration: 0.4ms | Allocations: 108)
+  Rendered cats/_card.html.erb (Duration: 0.1ms | Allocations: 8)
+  Rendered cats/_card.html.erb (Duration: 0.1ms | Allocations: 8)
+  Rendered cats/_card.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered cats/_card.html.erb (Duration: 0.1ms | Allocations: 8)
+  Rendered cats/_card.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered cats/index.html.erb within layouts/application (Duration: 5.3ms | Allocations: 1557)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 26ms (Views: 22.8ms | ActiveRecord: 0.5ms | Allocations: 6491)
+
+
+Started GET "/cats" for ::1 at 2020-06-23 23:44:21 +0300
+Processing by CatsController#index as HTML
+  Rendering cats/index.html.erb within layouts/application
+  [1m[36mCat Load (0.4ms)[0m  [1m[34mSELECT "cats".* FROM "cats"[0m
+  ↳ app/views/cats/index.html.erb:4
+  Rendered cats/_card.html.erb (Duration: 0.5ms | Allocations: 108)
+  Rendered cats/_card.html.erb (Duration: 0.1ms | Allocations: 8)
+  Rendered cats/_card.html.erb (Duration: 0.1ms | Allocations: 8)
+  Rendered cats/_card.html.erb (Duration: 0.1ms | Allocations: 8)
+  Rendered cats/_card.html.erb (Duration: 0.1ms | Allocations: 8)
+  Rendered cats/_card.html.erb (Duration: 0.1ms | Allocations: 8)
+  Rendered cats/index.html.erb within layouts/application (Duration: 5.3ms | Allocations: 1556)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 17ms (Views: 15.7ms | ActiveRecord: 0.4ms | Allocations: 6491)
+
+
+Started GET "/cats" for ::1 at 2020-06-23 23:45:51 +0300
+Processing by CatsController#index as HTML
+  Rendering cats/index.html.erb within layouts/application
+  [1m[36mCat Load (1.3ms)[0m  [1m[34mSELECT "cats".* FROM "cats"[0m
+  ↳ app/views/cats/index.html.erb:10
+  Rendered cats/_card.html.erb (Duration: 0.4ms | Allocations: 108)
+  Rendered cats/_card.html.erb (Duration: 0.1ms | Allocations: 8)
+  Rendered cats/_card.html.erb (Duration: 0.1ms | Allocations: 8)
+  Rendered cats/_card.html.erb (Duration: 0.1ms | Allocations: 8)
+  Rendered cats/_card.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered cats/_card.html.erb (Duration: 0.1ms | Allocations: 8)
+  Rendered cats/index.html.erb within layouts/application (Duration: 10.3ms | Allocations: 1556)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 20ms (Views: 17.3ms | ActiveRecord: 1.3ms | Allocations: 6482)
+
+
+Started GET "/cats/new" for ::1 at 2020-06-23 23:45:52 +0300
+Processing by CatsController#new as HTML
+  Rendering cats/new.html.erb within layouts/application
+  Rendered cats/_form.html.erb (Duration: 3.9ms | Allocations: 454)
+  Rendered cats/new.html.erb within layouts/application (Duration: 5.6ms | Allocations: 753)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 16ms (Views: 14.6ms | ActiveRecord: 0.0ms | Allocations: 4871)
+
+
+Started GET "/cats" for ::1 at 2020-06-23 23:46:37 +0300
+Processing by CatsController#index as HTML
+  Rendering cats/index.html.erb within layouts/application
+  [1m[36mCat Load (0.4ms)[0m  [1m[34mSELECT "cats".* FROM "cats"[0m
+  ↳ app/views/cats/index.html.erb:10
+  Rendered cats/_card.html.erb (Duration: 0.6ms | Allocations: 108)
+  Rendered cats/_card.html.erb (Duration: 0.1ms | Allocations: 8)
+  Rendered cats/_card.html.erb (Duration: 0.1ms | Allocations: 8)
+  Rendered cats/_card.html.erb (Duration: 0.1ms | Allocations: 8)
+  Rendered cats/_card.html.erb (Duration: 0.1ms | Allocations: 8)
+  Rendered cats/_card.html.erb (Duration: 0.1ms | Allocations: 8)
+  Rendered cats/index.html.erb within layouts/application (Duration: 5.3ms | Allocations: 1556)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 40ms (Views: 38.9ms | ActiveRecord: 0.4ms | Allocations: 13966)
+
+
+Started GET "/cats" for ::1 at 2020-06-23 23:46:38 +0300
+Processing by CatsController#index as HTML
+  Rendering cats/index.html.erb within layouts/application
+  [1m[36mCat Load (0.5ms)[0m  [1m[34mSELECT "cats".* FROM "cats"[0m
+  ↳ app/views/cats/index.html.erb:10
+  Rendered cats/_card.html.erb (Duration: 0.1ms | Allocations: 9)
+  Rendered cats/_card.html.erb (Duration: 0.1ms | Allocations: 8)
+  Rendered cats/_card.html.erb (Duration: 0.1ms | Allocations: 8)
+  Rendered cats/_card.html.erb (Duration: 0.1ms | Allocations: 8)
+  Rendered cats/_card.html.erb (Duration: 0.1ms | Allocations: 8)
+  Rendered cats/_card.html.erb (Duration: 0.1ms | Allocations: 8)
+  Rendered cats/index.html.erb within layouts/application (Duration: 5.4ms | Allocations: 1181)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 26ms (Views: 24.6ms | ActiveRecord: 0.5ms | Allocations: 5194)
+
+
+Started GET "/cats" for ::1 at 2020-06-23 23:46:45 +0300
+Processing by CatsController#index as HTML
+  Rendering cats/index.html.erb within layouts/application
+  [1m[36mCat Load (2.8ms)[0m  [1m[34mSELECT "cats".* FROM "cats"[0m
+  ↳ app/views/cats/index.html.erb:10
+  Rendered cats/_card.html.erb (Duration: 0.1ms | Allocations: 9)
+  Rendered cats/_card.html.erb (Duration: 0.1ms | Allocations: 8)
+  Rendered cats/_card.html.erb (Duration: 0.1ms | Allocations: 8)
+  Rendered cats/_card.html.erb (Duration: 0.1ms | Allocations: 8)
+  Rendered cats/_card.html.erb (Duration: 0.1ms | Allocations: 8)
+  Rendered cats/_card.html.erb (Duration: 0.1ms | Allocations: 8)
+  Rendered cats/index.html.erb within layouts/application (Duration: 8.3ms | Allocations: 1181)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 40ms (Views: 35.6ms | ActiveRecord: 2.8ms | Allocations: 12675)
+
+
+Started GET "/cats" for ::1 at 2020-06-23 23:46:56 +0300
+Processing by CatsController#index as HTML
+  Rendering cats/index.html.erb within layouts/application
+  [1m[36mCat Load (1.1ms)[0m  [1m[34mSELECT "cats".* FROM "cats"[0m
+  ↳ app/views/cats/index.html.erb:10
+  Rendered cats/_card.html.erb (Duration: 0.1ms | Allocations: 9)
+  Rendered cats/_card.html.erb (Duration: 0.1ms | Allocations: 8)
+  Rendered cats/_card.html.erb (Duration: 0.1ms | Allocations: 8)
+  Rendered cats/_card.html.erb (Duration: 0.1ms | Allocations: 8)
+  Rendered cats/_card.html.erb (Duration: 0.1ms | Allocations: 8)
+  Rendered cats/_card.html.erb (Duration: 0.1ms | Allocations: 8)
+  Rendered cats/index.html.erb within layouts/application (Duration: 5.2ms | Allocations: 1181)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 38ms (Views: 34.7ms | ActiveRecord: 1.1ms | Allocations: 12682)
+
+
+Started GET "/cats" for ::1 at 2020-06-23 23:46:57 +0300
+Processing by CatsController#index as HTML
+  Rendering cats/index.html.erb within layouts/application
+  [1m[36mCat Load (0.5ms)[0m  [1m[34mSELECT "cats".* FROM "cats"[0m
+  ↳ app/views/cats/index.html.erb:10
+  Rendered cats/_card.html.erb (Duration: 0.1ms | Allocations: 9)
+  Rendered cats/_card.html.erb (Duration: 0.1ms | Allocations: 8)
+  Rendered cats/_card.html.erb (Duration: 0.1ms | Allocations: 8)
+  Rendered cats/_card.html.erb (Duration: 0.1ms | Allocations: 8)
+  Rendered cats/_card.html.erb (Duration: 0.1ms | Allocations: 8)
+  Rendered cats/_card.html.erb (Duration: 0.1ms | Allocations: 8)
+  Rendered cats/index.html.erb within layouts/application (Duration: 5.1ms | Allocations: 1181)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 16ms (Views: 14.8ms | ActiveRecord: 0.5ms | Allocations: 5190)
+
+
+Started GET "/cats" for ::1 at 2020-06-23 23:47:07 +0300
+Processing by CatsController#index as HTML
+  Rendering cats/index.html.erb within layouts/application
+  [1m[36mCat Load (0.4ms)[0m  [1m[34mSELECT "cats".* FROM "cats"[0m
+  ↳ app/views/cats/index.html.erb:10
+  Rendered cats/_card.html.erb (Duration: 0.4ms | Allocations: 9)
+  Rendered cats/_card.html.erb (Duration: 0.2ms | Allocations: 8)
+  Rendered cats/_card.html.erb (Duration: 0.1ms | Allocations: 8)
+  Rendered cats/_card.html.erb (Duration: 0.1ms | Allocations: 8)
+  Rendered cats/_card.html.erb (Duration: 0.1ms | Allocations: 8)
+  Rendered cats/_card.html.erb (Duration: 0.1ms | Allocations: 8)
+  Rendered cats/index.html.erb within layouts/application (Duration: 5.8ms | Allocations: 1181)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 45ms (Views: 44.1ms | ActiveRecord: 0.4ms | Allocations: 12678)
+
+
+Started GET "/cats" for ::1 at 2020-06-23 23:47:08 +0300
+Processing by CatsController#index as HTML
+  Rendering cats/index.html.erb within layouts/application
+  [1m[36mCat Load (0.5ms)[0m  [1m[34mSELECT "cats".* FROM "cats"[0m
+  ↳ app/views/cats/index.html.erb:10
+  Rendered cats/_card.html.erb (Duration: 0.1ms | Allocations: 9)
+  Rendered cats/_card.html.erb (Duration: 0.1ms | Allocations: 8)
+  Rendered cats/_card.html.erb (Duration: 0.1ms | Allocations: 8)
+  Rendered cats/_card.html.erb (Duration: 0.1ms | Allocations: 8)
+  Rendered cats/_card.html.erb (Duration: 0.1ms | Allocations: 8)
+  Rendered cats/_card.html.erb (Duration: 0.1ms | Allocations: 8)
+  Rendered cats/index.html.erb within layouts/application (Duration: 6.1ms | Allocations: 1181)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 19ms (Views: 16.4ms | ActiveRecord: 0.5ms | Allocations: 5200)
+
+
+Started GET "/cats" for ::1 at 2020-06-23 23:47:09 +0300
+Processing by CatsController#index as HTML
+  Rendering cats/index.html.erb within layouts/application
+  [1m[36mCat Load (0.3ms)[0m  [1m[34mSELECT "cats".* FROM "cats"[0m
+  ↳ app/views/cats/index.html.erb:10
+  Rendered cats/_card.html.erb (Duration: 0.1ms | Allocations: 9)
+  Rendered cats/_card.html.erb (Duration: 0.1ms | Allocations: 8)
+  Rendered cats/_card.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered cats/_card.html.erb (Duration: 0.1ms | Allocations: 8)
+  Rendered cats/_card.html.erb (Duration: 0.1ms | Allocations: 8)
+  Rendered cats/_card.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered cats/index.html.erb within layouts/application (Duration: 3.2ms | Allocations: 1181)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 13ms (Views: 11.4ms | ActiveRecord: 0.3ms | Allocations: 5186)
+
+
+Started GET "/cats" for ::1 at 2020-06-23 23:47:09 +0300
+Processing by CatsController#index as HTML
+  Rendering cats/index.html.erb within layouts/application
+  [1m[36mCat Load (0.5ms)[0m  [1m[34mSELECT "cats".* FROM "cats"[0m
+  ↳ app/views/cats/index.html.erb:10
+  Rendered cats/_card.html.erb (Duration: 0.1ms | Allocations: 9)
+  Rendered cats/_card.html.erb (Duration: 0.1ms | Allocations: 8)
+  Rendered cats/_card.html.erb (Duration: 0.1ms | Allocations: 8)
+  Rendered cats/_card.html.erb (Duration: 0.1ms | Allocations: 8)
+  Rendered cats/_card.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered cats/_card.html.erb (Duration: 0.1ms | Allocations: 8)
+  Rendered cats/index.html.erb within layouts/application (Duration: 5.5ms | Allocations: 1181)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 14ms (Views: 12.8ms | ActiveRecord: 0.5ms | Allocations: 5198)
+
+
+Started GET "/cats" for ::1 at 2020-06-23 23:47:09 +0300
+Processing by CatsController#index as HTML
+  Rendering cats/index.html.erb within layouts/application
+  [1m[36mCat Load (1.9ms)[0m  [1m[34mSELECT "cats".* FROM "cats"[0m
+  ↳ app/views/cats/index.html.erb:10
+  Rendered cats/_card.html.erb (Duration: 0.1ms | Allocations: 9)
+  Rendered cats/_card.html.erb (Duration: 0.1ms | Allocations: 8)
+  Rendered cats/_card.html.erb (Duration: 0.2ms | Allocations: 8)
+  Rendered cats/_card.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered cats/_card.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered cats/_card.html.erb (Duration: 0.1ms | Allocations: 8)
+  Rendered cats/index.html.erb within layouts/application (Duration: 12.6ms | Allocations: 1181)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 28ms (Views: 23.9ms | ActiveRecord: 1.9ms | Allocations: 5188)
+
+
+Started GET "/cats" for ::1 at 2020-06-23 23:47:34 +0300
+Processing by CatsController#index as HTML
+  Rendering cats/index.html.erb within layouts/application
+  [1m[36mCat Load (0.4ms)[0m  [1m[34mSELECT "cats".* FROM "cats"[0m
+  ↳ app/views/cats/index.html.erb:10
+  Rendered cats/_card.html.erb (Duration: 0.1ms | Allocations: 9)
+  Rendered cats/_card.html.erb (Duration: 0.2ms | Allocations: 8)
+  Rendered cats/_card.html.erb (Duration: 0.2ms | Allocations: 8)
+  Rendered cats/_card.html.erb (Duration: 0.1ms | Allocations: 8)
+  Rendered cats/_card.html.erb (Duration: 0.1ms | Allocations: 8)
+  Rendered cats/_card.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered cats/index.html.erb within layouts/application (Duration: 7.3ms | Allocations: 1181)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 108ms (Views: 107.0ms | ActiveRecord: 0.4ms | Allocations: 13098)
+
+
+Started GET "/cats/new" for ::1 at 2020-06-23 23:47:37 +0300
+Processing by CatsController#new as HTML
+  Rendering cats/new.html.erb within layouts/application
+  Rendered cats/_form.html.erb (Duration: 1.6ms | Allocations: 454)
+  Rendered cats/new.html.erb within layouts/application (Duration: 2.9ms | Allocations: 760)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 15ms (Views: 13.9ms | ActiveRecord: 0.0ms | Allocations: 4878)
+
+
+Started GET "/cats" for ::1 at 2020-06-23 23:51:01 +0300
+Processing by CatsController#index as HTML
+  Rendering cats/index.html.erb within layouts/application
+  [1m[36mCat Load (5.0ms)[0m  [1m[34mSELECT "cats".* FROM "cats"[0m
+  ↳ app/views/cats/index.html.erb:10
+  Rendered cats/_card.html.erb (Duration: 0.5ms | Allocations: 9)
+  Rendered cats/_card.html.erb (Duration: 0.1ms | Allocations: 8)
+  Rendered cats/_card.html.erb (Duration: 0.1ms | Allocations: 8)
+  Rendered cats/_card.html.erb (Duration: 0.1ms | Allocations: 8)
+  Rendered cats/_card.html.erb (Duration: 0.1ms | Allocations: 8)
+  Rendered cats/_card.html.erb (Duration: 0.1ms | Allocations: 8)
+  Rendered cats/index.html.erb within layouts/application (Duration: 8.9ms | Allocations: 1181)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 129ms (Views: 116.1ms | ActiveRecord: 5.0ms | Allocations: 13527)
+
+
