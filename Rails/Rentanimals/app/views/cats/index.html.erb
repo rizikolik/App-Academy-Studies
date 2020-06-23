@@ -1,1 +1,6 @@
-<h1>helllo controller</h1>
+<div class="default-cont">
+<% @all.each do |cat|%>
+<%= render 'card', cat:cat %>
+<%end%>
+</div>
+
