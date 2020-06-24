@@ -1,7 +1,7 @@
 <% action = (cat.persisted? ? cat_url(cat) : cats_url) %>
 <% method = (cat.persisted? ? :patch : :post) %>
 
-<form action="<%= action %>" method="post">
+<form class="form" action="<%= action %>" method="post">
   <input type="hidden" name="_method" value="<%= method %>">
 
   <label for="cat_name">Name</label>

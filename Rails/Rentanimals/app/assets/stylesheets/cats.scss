@@ -1,6 +1,11 @@
 // Place all the styles related to the Cats controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
 .index-header {
   width: 100%;
   background-color: #000066;
@@ -21,6 +26,17 @@ a {
 }
 nav a {
   padding: 0px 10px;
+}
+.navbar {
+  background-color: #000066;
+  top: 0;
+  margin-top: 0;
+  margin-bottom: 5em;
+  height: 4em;
+  h1 {
+    margin: 0;
+    padding: 0;
+  }
 }
 .default-cont {
   display: flex;
