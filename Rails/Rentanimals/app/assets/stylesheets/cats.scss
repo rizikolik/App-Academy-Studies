@@ -65,6 +65,24 @@ nav a {
 }
 .description {
   background: #1e9999;
+  width: 60%;
+  margin-top: 2em;
+  margin-right: auto;
+  margin-left: auto;
+
+  text-align: center;
+  img {
+    margin-top: 2em;
+    max-width: 100%;
+  }
+  table {
+    margin: auto;
+    background: white;
+    th {
+      background-color: blue;
+      color: yellow;
+    }
+  }
 }
 
 @media screen and (max-width: 600px) {
