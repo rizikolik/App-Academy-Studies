@@ -5,6 +5,7 @@ html,
 body {
   margin: 0;
   padding: 0;
+  font-family: "Roboto Mono", monospace;
 }
 .index-header {
   width: 100%;
@@ -31,11 +32,20 @@ nav a {
   background-color: #000066;
   top: 0;
   margin-top: 0;
-  margin-bottom: 5em;
-  height: 4em;
-  h1 {
-    margin: 0;
-    padding: 0;
+  margin-bottom: 2em;
+  height: 2em;
+  color: yellow;
+  font-size: 2.5em;
+  a {
+    &:hover {
+      cursor: pointer;
+    }
+  }
+  .left-span {
+    float: left;
+  }
+  .right-span {
+    float: right;
   }
 }
 .default-cont {
@@ -43,6 +53,7 @@ nav a {
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
+  background-color: blue;
   .container {
     padding: 1em;
     margin: 4vh;
@@ -52,14 +63,16 @@ nav a {
     text-align: center;
   }
 }
+.description {
+  background: #1e9999;
+}
 
 @media screen and (max-width: 600px) {
-  h1 {
-    font-size: 2em;
-  }
   .default-cont {
     flex-direction: column;
-
+    .index-header {
+      font-size: 1.5em;
+    }
     .container {
       padding: 1em;
       margin: 2vh;
