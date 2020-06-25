@@ -18,7 +18,7 @@ body {
   color: yellow;
 }
 h1 {
-  font-size: 60px;
+  font-size: 10vh;
   color: yellow;
 }
 a {
@@ -43,8 +43,29 @@ nav a {
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
+  .container {
+    padding: 1em;
+    margin: 4vh;
+
+    background: yellow;
+    color: blue;
+    text-align: center;
+  }
 }
-.container {
-  padding: 1em;
-  margin: auto;
+
+@media screen and (max-width: 600px) {
+  h1 {
+    font-size: 2em;
+  }
+  .default-cont {
+    flex-direction: column;
+
+    .container {
+      padding: 1em;
+      margin: 2vh;
+
+      background: yellow;
+      color: blue;
+    }
+  }
 }
