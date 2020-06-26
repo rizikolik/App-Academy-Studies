@@ -5163,3 +5163,195 @@ Processing by CatsController#show as HTML
 Completed 200 OK in 21ms (Views: 16.7ms | ActiveRecord: 0.3ms | Allocations: 7556)
 
 
+Started GET "/" for ::1 at 2020-06-26 21:12:39 +0300
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/ynsture/.rbenv/versions/2.6.5/lib/ruby/gems/2.6.0/gems/railties-6.0.3.2/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/ynsture/.rbenv/versions/2.6.5/lib/ruby/gems/2.6.0/gems/railties-6.0.3.2/lib/rails/templates/rails/welcome/index.html.erb (Duration: 15.5ms | Allocations: 308)
+Completed 200 OK in 61ms (Views: 26.6ms | ActiveRecord: 0.0ms | Allocations: 1893)
+
+
+Started GET "/cats" for ::1 at 2020-06-26 21:12:48 +0300
+Processing by CatsController#index as HTML
+  Rendering cats/index.html.erb within layouts/application
+  Rendered cats/_navbar.html.erb (Duration: 0.9ms | Allocations: 92)
+  [1m[36mCat Load (1.5ms)[0m  [1m[34mSELECT "cats".* FROM "cats"[0m
+  ↳ app/views/cats/index.html.erb:11
+  Rendered cats/_card.html.erb (Duration: 1.7ms | Allocations: 113)
+  Rendered cats/_card.html.erb (Duration: 0.1ms | Allocations: 8)
+  Rendered cats/_card.html.erb (Duration: 0.1ms | Allocations: 8)
+  Rendered cats/_card.html.erb (Duration: 0.1ms | Allocations: 8)
+  Rendered cats/_card.html.erb (Duration: 0.1ms | Allocations: 8)
+  Rendered cats/_card.html.erb (Duration: 0.1ms | Allocations: 8)
+  Rendered cats/_card.html.erb (Duration: 0.1ms | Allocations: 8)
+  Rendered cats/_card.html.erb (Duration: 0.1ms | Allocations: 8)
+  Rendered cats/_card.html.erb (Duration: 0.1ms | Allocations: 8)
+  Rendered cats/index.html.erb within layouts/application (Duration: 55.1ms | Allocations: 7945)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 191ms (Views: 170.7ms | ActiveRecord: 15.2ms | Allocations: 27811)
+
+
+Started GET "/cats" for ::1 at 2020-06-26 21:14:32 +0300
+Processing by CatsController#index as HTML
+  Rendering cats/index.html.erb within layouts/application
+  Rendered cats/_navbar.html.erb (Duration: 0.2ms | Allocations: 86)
+  [1m[36mCat Load (1.3ms)[0m  [1m[34mSELECT "cats".* FROM "cats"[0m
+  ↳ app/views/cats/index.html.erb:11
+  Rendered cats/_card.html.erb (Duration: 0.6ms | Allocations: 186)
+  Rendered cats/_card.html.erb (Duration: 0.2ms | Allocations: 34)
+  Rendered cats/_card.html.erb (Duration: 0.2ms | Allocations: 34)
+  Rendered cats/_card.html.erb (Duration: 0.2ms | Allocations: 34)
+  Rendered cats/_card.html.erb (Duration: 0.1ms | Allocations: 34)
+  Rendered cats/_card.html.erb (Duration: 0.2ms | Allocations: 34)
+  Rendered cats/_card.html.erb (Duration: 0.2ms | Allocations: 34)
+  Rendered cats/_card.html.erb (Duration: 0.2ms | Allocations: 34)
+  Rendered cats/_card.html.erb (Duration: 0.2ms | Allocations: 34)
+  Rendered cats/index.html.erb within layouts/application (Duration: 9.5ms | Allocations: 2410)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 20ms (Views: 17.2ms | ActiveRecord: 1.3ms | Allocations: 8665)
+
+
+Started GET "/cats/1" for ::1 at 2020-06-26 21:15:02 +0300
+Processing by CatsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCat Load (0.4ms)[0m  [1m[34mSELECT "cats".* FROM "cats" WHERE "cats"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/cats_controller.rb:32:in `show'
+  Rendering cats/show.html.erb within layouts/application
+  Rendered cats/_showcard.html.erb (Duration: 9.4ms | Allocations: 1480)
+  Rendered cats/show.html.erb within layouts/application (Duration: 10.6ms | Allocations: 1781)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 67ms (Views: 27.4ms | ActiveRecord: 0.7ms | Allocations: 10819)
+
+
+Started GET "/cats" for ::1 at 2020-06-26 21:15:45 +0300
+Processing by CatsController#index as HTML
+  Rendering cats/index.html.erb within layouts/application
+  Rendered cats/_navbar.html.erb (Duration: 0.5ms | Allocations: 86)
+  [1m[36mCat Load (0.5ms)[0m  [1m[34mSELECT "cats".* FROM "cats"[0m
+  ↳ app/views/cats/index.html.erb:11
+  Rendered cats/_card.html.erb (Duration: 18.3ms | Allocations: 3482)
+  Rendered cats/index.html.erb within layouts/application (Duration: 24.7ms | Allocations: 4907)
+Completed 500 Internal Server Error in 30ms (ActiveRecord: 0.5ms | Allocations: 6203)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <%=link_to "show", cat_path(cat) %> 
+<div class="container">
+<img src="http://placekitten.com/300/200" />
+<h3>Rent <%=cat.name %> </h3>
+
+
+
+</div>
+<%end%>
+
+):
+1:    <%=link_to "show", cat_path(cat) %> 
+2:    <div class="container">
+3:    <img src="http://placekitten.com/300/200" />
+4:    <h3>Rent <%=cat.name %> </h3>
+5:    
+6:    
+7:    
+8:    </div>
+9:    <%end%>
+  
+app/views/cats/_card.html.erb:11: syntax error, unexpected end, expecting end-of-input
+app/views/cats/_card.html.erb:11: syntax error, unexpected end, expecting end-of-input
+app/views/cats/_card.html.erb:11: syntax error, unexpected end, expecting end-of-input
+app/views/cats/_card.html.erb:11: syntax error, unexpected end, expecting end-of-input
+app/views/cats/_card.html.erb:11: syntax error, unexpected end, expecting end-of-input
+app/views/cats/_card.html.erb:11: syntax error, unexpected end, expecting end-of-input
+app/views/cats/index.html.erb:12
+app/views/cats/index.html.erb:11
+Started GET "/cats" for ::1 at 2020-06-26 21:18:28 +0300
+Processing by CatsController#index as HTML
+  Rendering cats/index.html.erb within layouts/application
+  Rendered cats/_navbar.html.erb (Duration: 0.5ms | Allocations: 86)
+  [1m[36mCat Load (0.5ms)[0m  [1m[34mSELECT "cats".* FROM "cats"[0m
+  ↳ app/views/cats/index.html.erb:11
+  Rendered cats/_card.html.erb (Duration: 1.4ms | Allocations: 1207)
+  Rendered cats/index.html.erb within layouts/application (Duration: 8.2ms | Allocations: 2642)
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.5ms | Allocations: 3966)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <%= link_to "show", cat_path(cat) %> 
+<div class="container">
+<img src="http://placekitten.com/300/200" />
+<h3>Rent <%=cat.name %> </h3>
+
+
+
+</div>
+<%=end%>
+
+):
+1:    <%= link_to "show", cat_path(cat) %> 
+2:    <div class="container">
+3:    <img src="http://placekitten.com/300/200" />
+4:    <h3>Rent <%=cat.name %> </h3>
+5:    
+6:    
+7:    
+8:    </div>
+9:    <%=end%>
+  
+app/views/cats/_card.html.erb:9: syntax error, unexpected end
+app/views/cats/_card.html.erb:12: syntax error, unexpected end, expecting ')'
+app/views/cats/_card.html.erb:9: syntax error, unexpected end
+app/views/cats/_card.html.erb:12: syntax error, unexpected end, expecting ')'
+app/views/cats/_card.html.erb:9: syntax error, unexpected end
+app/views/cats/_card.html.erb:12: syntax error, unexpected end, expecting ')'
+app/views/cats/_card.html.erb:9: syntax error, unexpected end
+app/views/cats/_card.html.erb:12: syntax error, unexpected end, expecting ')'
+app/views/cats/_card.html.erb:9: syntax error, unexpected end
+app/views/cats/_card.html.erb:12: syntax error, unexpected end, expecting ')'
+app/views/cats/_card.html.erb:9: syntax error, unexpected end
+app/views/cats/_card.html.erb:12: syntax error, unexpected end, expecting ')'
+app/views/cats/index.html.erb:12
+app/views/cats/index.html.erb:11
+Started GET "/cats" for ::1 at 2020-06-26 21:19:32 +0300
+Processing by CatsController#index as HTML
+  Rendering cats/index.html.erb within layouts/application
+  Rendered cats/_navbar.html.erb (Duration: 0.5ms | Allocations: 86)
+  [1m[36mCat Load (0.5ms)[0m  [1m[34mSELECT "cats".* FROM "cats"[0m
+  ↳ app/views/cats/index.html.erb:11
+  Rendered cats/_card.html.erb (Duration: 1.3ms | Allocations: 195)
+  Rendered cats/_card.html.erb (Duration: 0.3ms | Allocations: 41)
+  Rendered cats/_card.html.erb (Duration: 0.2ms | Allocations: 41)
+  Rendered cats/_card.html.erb (Duration: 0.2ms | Allocations: 41)
+  Rendered cats/_card.html.erb (Duration: 0.2ms | Allocations: 41)
+  Rendered cats/_card.html.erb (Duration: 0.3ms | Allocations: 41)
+  Rendered cats/_card.html.erb (Duration: 0.6ms | Allocations: 41)
+  Rendered cats/_card.html.erb (Duration: 0.3ms | Allocations: 41)
+  Rendered cats/_card.html.erb (Duration: 0.2ms | Allocations: 41)
+  Rendered cats/index.html.erb within layouts/application (Duration: 16.4ms | Allocations: 2486)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 34ms (Views: 32.0ms | ActiveRecord: 0.5ms | Allocations: 8779)
+
+
+Started GET "/cats/1" for ::1 at 2020-06-26 21:19:34 +0300
+Processing by CatsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCat Load (0.6ms)[0m  [1m[34mSELECT "cats".* FROM "cats" WHERE "cats"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/cats_controller.rb:32:in `show'
+  Rendering cats/show.html.erb within layouts/application
+  Rendered cats/_showcard.html.erb (Duration: 2.2ms | Allocations: 456)
+  Rendered cats/show.html.erb within layouts/application (Duration: 4.1ms | Allocations: 750)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 25ms (Views: 20.5ms | ActiveRecord: 0.6ms | Allocations: 6785)
+
+
+Started GET "/cats/1" for ::1 at 2020-06-26 21:19:36 +0300
+Processing by CatsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCat Load (0.6ms)[0m  [1m[34mSELECT "cats".* FROM "cats" WHERE "cats"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/cats_controller.rb:32:in `show'
+  Rendering cats/show.html.erb within layouts/application
+  Rendered cats/_showcard.html.erb (Duration: 0.8ms | Allocations: 128)
+  Rendered cats/show.html.erb within layouts/application (Duration: 1.2ms | Allocations: 199)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 48ms (Views: 36.4ms | ActiveRecord: 0.6ms | Allocations: 6056)
+
+
